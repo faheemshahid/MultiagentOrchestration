@@ -1,0 +1,1963 @@
+[
+  {
+    "instance_id": "6833773f",
+    "intent_text": "Chest CT scan uploaded, 512 DICOM slices, AI needs to flag pulmonary nodules above 6mm.",
+    "intent_profile": {
+      "detected_domain": "healthcare",
+      "detected_subtype": "medical_imaging",
+      "key_entities": [
+        "Chest",
+        "DICOM"
+      ],
+      "action_verbs": [],
+      "numeric_constraints": {},
+      "urgency_signals": [],
+      "tfidf_best_class": "medical_imaging",
+      "tfidf_cosine_sim": 0.492366,
+      "tfidf_top_terms": [
+        "dicom",
+        "ct",
+        "scan"
+      ],
+      "llm_confidence": 0.808,
+      "llm_reasoning": "Keyword evidence in intent maps to healthcare/medical_imaging. Urgency=medium from temporal/safety signals.",
+      "parse_time_ms": 2.03
+    },
+    "qos_profile": {
+      "urgency_level": "low",
+      "latency_budget_ms": 1000.0,
+      "latency_target_ms": 500.0,
+      "throughput_req_kbps": 8765,
+      "reliability_pct": 99.0,
+      "criticality_score": 0.7512,
+      "fuzzy_memberships": {
+        "background": 0.5,
+        "low": 1.0,
+        "medium": 0.0,
+        "high": 0.0,
+        "critical": 0.0
+      },
+      "fuzzy_raw_score": 0.2,
+      "weight_domain": 1.0,
+      "weight_subtype": 0.6,
+      "weight_llm_conf": 0.808,
+      "weight_realtime": 0.6,
+      "real_time_required": false,
+      "gpu_required": true,
+      "offload_permitted": true,
+      "preferred_tier": "cloud",
+      "fallback_tiers": [
+        "fog",
+        "edge"
+      ],
+      "sla_violation_cost": 7.51,
+      "profiling_time_ms": 0.0
+    },
+    "classification": {
+      "primary_class": "healthcare.medical_imaging",
+      "secondary_class": "healthcare.medical_imaging",
+      "compute_class": "gpu_heavy",
+      "taxonomy_path": "healthcare/resource_intensive/medical_imaging",
+      "nb_posterior_probs": {
+        "medical_imaging": 0.602964,
+        "smart_environment": 0.052519,
+        "federated_learning": 0.050247,
+        "emergency_care": 0.049519,
+        "process_control": 0.049519,
+        "digital_twin": 0.049519,
+        "predictive_maintenance": 0.048805,
+        "quality_control": 0.048805,
+        "remote_monitoring": 0.048104
+      },
+      "nb_top_class": "medical_imaging",
+      "nb_confidence": 0.602964,
+      "nb_confidence_gap": 0.5504450000000001,
+      "estimated_cpu_cores": 12.9,
+      "estimated_ram_mb": 17336,
+      "estimated_gpu_mb": 11410,
+      "estimated_bw_kbps": 8765,
+      "model_size_class": "8b",
+      "llm_refinement_used": false,
+      "classification_ms": 1.0
+    },
+    "resource_snapshot": {
+      "timestamp": 1777474537.9628937,
+      "total_nodes": 9,
+      "available_nodes": {
+        "cloud": 1,
+        "fog": 2,
+        "edge": 4,
+        "local": 2
+      },
+      "overloaded_nodes": [],
+      "offline_nodes": [],
+      "tier_avg_cpu_pct": {
+        "cloud": 0.0,
+        "fog": 0.0,
+        "edge": 0.0,
+        "local": 0.0
+      },
+      "tier_avg_ram_pct": {
+        "cloud": 0.0,
+        "fog": 0.0,
+        "edge": 0.0,
+        "local": 0.0
+      },
+      "tier_free_gpu_mb": {
+        "cloud": 751449,
+        "fog": 49175,
+        "edge": 0,
+        "local": 0
+      },
+      "tier_ema_cpu": {
+        "cloud": 0.0,
+        "fog": 0.0,
+        "edge": 0.0,
+        "local": 0.0
+      },
+      "tier_ema_ram": {
+        "cloud": 0.0,
+        "fog": 0.0,
+        "edge": 0.0,
+        "local": 0.0
+      },
+      "sla_violations": [],
+      "monitoring_ms": 0.0
+    },
+    "placement": {
+      "instance_id": "6833773f",
+      "selected_node_id": "",
+      "selected_tier": "",
+      "selected_hw_class": "",
+      "topsis_cc": 0.0,
+      "topsis_ranking": [
+        {
+          "node_id": "C01-B9CE",
+          "tier": "cloud",
+          "cc": 0.0
+        },
+        {
+          "node_id": "F01-C08F",
+          "tier": "fog",
+          "cc": 0.0
+        },
+        {
+          "node_id": "F02-FFF6",
+          "tier": "fog",
+          "cc": 0.0
+        }
+      ],
+      "placement_score": 0.0,
+      "latency_estimate_ms": 0.0,
+      "cpu_fit_pct": 0.0,
+      "ram_fit_pct": 0.0,
+      "admission_status": "rejected",
+      "rejection_reason": "no_feasible_node_all_tiers",
+      "alternatives_tried": [
+        {
+          "tier": "edge",
+          "reason": "no_feasible_node",
+          "checked": [
+            [
+              "E01-2C5F",
+              "cpu_insufficient (11.6 < 12.9)"
+            ],
+            [
+              "E02-DB15",
+              "gpu_insufficient (0 < 11410 MB)"
+            ],
+            [
+              "E03-E995",
+              "cpu_insufficient (11.0 < 12.9)"
+            ]
+          ]
+        }
+      ],
+      "placement_ms": 0.0
+    },
+    "offload": {
+      "triggered": false,
+      "trigger_reason": "",
+      "source_node_id": "",
+      "source_ema_cpu": 0.0,
+      "source_ema_ram": 0.0,
+      "target_node_id": "",
+      "target_tier": "",
+      "target_ema_cpu": 0.0,
+      "apps_offloaded": [],
+      "offload_latency_ms": 0.0,
+      "success": false
+    },
+    "final_status": "rejected",
+    "total_pipeline_ms": 3.02,
+    "timestamp": 1777474537.9598699
+  },
+  {
+    "instance_id": "b4c66d02",
+    "intent_text": "Parking lot occupancy sensor data: 94% capacity on level 2, redirect signage update required.",
+    "intent_profile": {
+      "detected_domain": "general",
+      "detected_subtype": "smart_environment",
+      "key_entities": [
+        "Parking"
+      ],
+      "action_verbs": [],
+      "numeric_constraints": {
+        "percentage": [
+          94.0
+        ]
+      },
+      "urgency_signals": [
+        "required"
+      ],
+      "tfidf_best_class": "smart_environment",
+      "tfidf_cosine_sim": 0.276606,
+      "tfidf_top_terms": [
+        "parking",
+        "occupancy",
+        "level"
+      ],
+      "llm_confidence": 0.796,
+      "llm_reasoning": "Keyword evidence in intent maps to general/smart_environment. Urgency=low from temporal/safety signals.",
+      "parse_time_ms": 1.0
+    },
+    "qos_profile": {
+      "urgency_level": "medium",
+      "latency_budget_ms": 200.0,
+      "latency_target_ms": 100.0,
+      "throughput_req_kbps": 56,
+      "reliability_pct": 99.0,
+      "criticality_score": 0.4769,
+      "fuzzy_memberships": {
+        "background": 0.0,
+        "low": 0.6667,
+        "medium": 0.6667,
+        "high": 0.0,
+        "critical": 0.0
+      },
+      "fuzzy_raw_score": 0.4,
+      "weight_domain": 0.5,
+      "weight_subtype": 0.25,
+      "weight_llm_conf": 0.796,
+      "weight_realtime": 0.6,
+      "real_time_required": false,
+      "gpu_required": false,
+      "offload_permitted": true,
+      "preferred_tier": "fog",
+      "fallback_tiers": [
+        "edge",
+        "cloud"
+      ],
+      "sla_violation_cost": 4.77,
+      "profiling_time_ms": 0.0
+    },
+    "classification": {
+      "primary_class": "general.federated_learning",
+      "secondary_class": "general.smart_environment",
+      "compute_class": "gpu_light",
+      "taxonomy_path": "general/distributed_learning/federated_learning",
+      "nb_posterior_probs": {
+        "smart_environment": 0.321393,
+        "quality_control": 0.149331,
+        "medical_imaging": 0.076872,
+        "federated_learning": 0.076872,
+        "emergency_care": 0.075758,
+        "process_control": 0.075758,
+        "digital_twin": 0.075758,
+        "predictive_maintenance": 0.074665,
+        "remote_monitoring": 0.073594
+      },
+      "nb_top_class": "smart_environment",
+      "nb_confidence": 0.321393,
+      "nb_confidence_gap": 0.172062,
+      "estimated_cpu_cores": 1.45,
+      "estimated_ram_mb": 452,
+      "estimated_gpu_mb": 0,
+      "estimated_bw_kbps": 56,
+      "model_size_class": "3b",
+      "llm_refinement_used": true,
+      "classification_ms": 0.0
+    },
+    "resource_snapshot": {
+      "timestamp": 1777474537.9638925,
+      "total_nodes": 9,
+      "available_nodes": {
+        "cloud": 1,
+        "fog": 2,
+        "edge": 4,
+        "local": 2
+      },
+      "overloaded_nodes": [],
+      "offline_nodes": [],
+      "tier_avg_cpu_pct": {
+        "cloud": 0.0,
+        "fog": 0.0,
+        "edge": 0.0,
+        "local": 0.0
+      },
+      "tier_avg_ram_pct": {
+        "cloud": 0.0,
+        "fog": 0.0,
+        "edge": 0.0,
+        "local": 0.0
+      },
+      "tier_free_gpu_mb": {
+        "cloud": 751449,
+        "fog": 49175,
+        "edge": 0,
+        "local": 0
+      },
+      "tier_ema_cpu": {
+        "cloud": 0.0,
+        "fog": 0.0,
+        "edge": 0.0,
+        "local": 0.0
+      },
+      "tier_ema_ram": {
+        "cloud": 0.0,
+        "fog": 0.0,
+        "edge": 0.0,
+        "local": 0.0
+      },
+      "sla_violations": [],
+      "monitoring_ms": 1.0
+    },
+    "placement": {
+      "instance_id": "b4c66d02",
+      "selected_node_id": "",
+      "selected_tier": "",
+      "selected_hw_class": "",
+      "topsis_cc": 0.0,
+      "topsis_ranking": [
+        {
+          "node_id": "F01-C08F",
+          "tier": "fog",
+          "cc": 0.0
+        },
+        {
+          "node_id": "F02-FFF6",
+          "tier": "fog",
+          "cc": 0.0
+        },
+        {
+          "node_id": "E01-2C5F",
+          "tier": "edge",
+          "cc": 0.0
+        },
+        {
+          "node_id": "E02-DB15",
+          "tier": "edge",
+          "cc": 0.0
+        },
+        {
+          "node_id": "E03-E995",
+          "tier": "edge",
+          "cc": 0.0
+        },
+        {
+          "node_id": "E04-3E9F",
+          "tier": "edge",
+          "cc": 0.0
+        },
+        {
+          "node_id": "C01-B9CE",
+          "tier": "cloud",
+          "cc": 0.0
+        }
+      ],
+      "placement_score": 0.0,
+      "latency_estimate_ms": 0.0,
+      "cpu_fit_pct": 0.0,
+      "ram_fit_pct": 0.0,
+      "admission_status": "rejected",
+      "rejection_reason": "no_feasible_node_all_tiers",
+      "alternatives_tried": [],
+      "placement_ms": 0.0
+    },
+    "offload": {
+      "triggered": false,
+      "trigger_reason": "",
+      "source_node_id": "",
+      "source_ema_cpu": 0.0,
+      "source_ema_ram": 0.0,
+      "target_node_id": "",
+      "target_tier": "",
+      "target_ema_cpu": 0.0,
+      "apps_offloaded": [],
+      "offload_latency_ms": 0.0,
+      "success": false
+    },
+    "final_status": "rejected",
+    "total_pipeline_ms": 2.0,
+    "timestamp": 1777474537.9628937
+  },
+  {
+    "instance_id": "963c1c27",
+    "intent_text": "Aircraft maintenance twin: engine serial 7842 cycle count approaching limit, dock scheduling required.",
+    "intent_profile": {
+      "detected_domain": "general",
+      "detected_subtype": "digital_twin",
+      "key_entities": [
+        "Aircraft"
+      ],
+      "action_verbs": [],
+      "numeric_constraints": {},
+      "urgency_signals": [
+        "required"
+      ],
+      "tfidf_best_class": "digital_twin",
+      "tfidf_cosine_sim": 0.380571,
+      "tfidf_top_terms": [
+        "maintenance",
+        "twin",
+        "aircraft"
+      ],
+      "llm_confidence": 0.84,
+      "llm_reasoning": "Keyword evidence in intent maps to general/digital_twin. Urgency=medium from temporal/safety signals.",
+      "parse_time_ms": 1.0
+    },
+    "qos_profile": {
+      "urgency_level": "medium",
+      "latency_budget_ms": 200.0,
+      "latency_target_ms": 100.0,
+      "throughput_req_kbps": 18880,
+      "reliability_pct": 99.0,
+      "criticality_score": 0.571,
+      "fuzzy_memberships": {
+        "background": 0.0,
+        "low": 0.6667,
+        "medium": 0.6667,
+        "high": 0.0,
+        "critical": 0.0
+      },
+      "fuzzy_raw_score": 0.4,
+      "weight_domain": 0.5,
+      "weight_subtype": 0.5,
+      "weight_llm_conf": 0.84,
+      "weight_realtime": 0.6,
+      "real_time_required": false,
+      "gpu_required": true,
+      "offload_permitted": true,
+      "preferred_tier": "fog",
+      "fallback_tiers": [
+        "edge",
+        "cloud"
+      ],
+      "sla_violation_cost": 5.71,
+      "profiling_time_ms": 1.0
+    },
+    "classification": {
+      "primary_class": "general.federated_learning",
+      "secondary_class": "general.digital_twin",
+      "compute_class": "gpu_heavy",
+      "taxonomy_path": "general/distributed_learning/federated_learning",
+      "nb_posterior_probs": {
+        "digital_twin": 0.498984,
+        "smart_environment": 0.066152,
+        "medical_imaging": 0.06329,
+        "federated_learning": 0.06329,
+        "emergency_care": 0.062373,
+        "process_control": 0.062373,
+        "predictive_maintenance": 0.061473,
+        "quality_control": 0.061473,
+        "remote_monitoring": 0.060591
+      },
+      "nb_top_class": "digital_twin",
+      "nb_confidence": 0.498984,
+      "nb_confidence_gap": 0.432832,
+      "estimated_cpu_cores": 2.27,
+      "estimated_ram_mb": 23343,
+      "estimated_gpu_mb": 12755,
+      "estimated_bw_kbps": 18880,
+      "model_size_class": "8b",
+      "llm_refinement_used": true,
+      "classification_ms": 0.51
+    },
+    "resource_snapshot": {
+      "timestamp": 1777474537.9704018,
+      "total_nodes": 9,
+      "available_nodes": {
+        "cloud": 1,
+        "fog": 2,
+        "edge": 4,
+        "local": 2
+      },
+      "overloaded_nodes": [],
+      "offline_nodes": [],
+      "tier_avg_cpu_pct": {
+        "cloud": 0.0,
+        "fog": 0.0,
+        "edge": 0.0,
+        "local": 0.0
+      },
+      "tier_avg_ram_pct": {
+        "cloud": 0.0,
+        "fog": 0.0,
+        "edge": 0.0,
+        "local": 0.0
+      },
+      "tier_free_gpu_mb": {
+        "cloud": 751449,
+        "fog": 49175,
+        "edge": 0,
+        "local": 0
+      },
+      "tier_ema_cpu": {
+        "cloud": 0.0,
+        "fog": 0.0,
+        "edge": 0.0,
+        "local": 0.0
+      },
+      "tier_ema_ram": {
+        "cloud": 0.0,
+        "fog": 0.0,
+        "edge": 0.0,
+        "local": 0.0
+      },
+      "sla_violations": [],
+      "monitoring_ms": 1.01
+    },
+    "placement": {
+      "instance_id": "963c1c27",
+      "selected_node_id": "",
+      "selected_tier": "",
+      "selected_hw_class": "",
+      "topsis_cc": 0.0,
+      "topsis_ranking": [
+        {
+          "node_id": "F01-C08F",
+          "tier": "fog",
+          "cc": 0.0
+        },
+        {
+          "node_id": "F02-FFF6",
+          "tier": "fog",
+          "cc": 0.0
+        },
+        {
+          "node_id": "C01-B9CE",
+          "tier": "cloud",
+          "cc": 0.0
+        }
+      ],
+      "placement_score": 0.0,
+      "latency_estimate_ms": 0.0,
+      "cpu_fit_pct": 0.0,
+      "ram_fit_pct": 0.0,
+      "admission_status": "rejected",
+      "rejection_reason": "no_feasible_node_all_tiers",
+      "alternatives_tried": [
+        {
+          "tier": "edge",
+          "reason": "no_feasible_node",
+          "checked": [
+            [
+              "E01-2C5F",
+              "gpu_insufficient (0 < 12755 MB)"
+            ],
+            [
+              "E02-DB15",
+              "gpu_insufficient (0 < 12755 MB)"
+            ],
+            [
+              "E03-E995",
+              "gpu_insufficient (0 < 12755 MB)"
+            ]
+          ]
+        }
+      ],
+      "placement_ms": 0.0
+    },
+    "offload": {
+      "triggered": false,
+      "trigger_reason": "",
+      "source_node_id": "",
+      "source_ema_cpu": 0.0,
+      "source_ema_ram": 0.0,
+      "target_node_id": "",
+      "target_tier": "",
+      "target_ema_cpu": 0.0,
+      "apps_offloaded": [],
+      "offload_latency_ms": 0.0,
+      "success": false
+    },
+    "final_status": "rejected",
+    "total_pipeline_ms": 3.52,
+    "timestamp": 1777474537.9678907
+  },
+  {
+    "instance_id": "4d2c2f68",
+    "intent_text": "Factory digital twin scenario: what happens to throughput if conveyor 3 goes down for 2 hours?",
+    "intent_profile": {
+      "detected_domain": "general",
+      "detected_subtype": "digital_twin",
+      "key_entities": [
+        "Factory"
+      ],
+      "action_verbs": [],
+      "numeric_constraints": {},
+      "urgency_signals": [],
+      "tfidf_best_class": "digital_twin",
+      "tfidf_cosine_sim": 0.491314,
+      "tfidf_top_terms": [
+        "digital",
+        "what",
+        "if",
+        "twin",
+        "scenario"
+      ],
+      "llm_confidence": 0.833,
+      "llm_reasoning": "Keyword evidence in intent maps to general/digital_twin. Urgency=medium from temporal/safety signals.",
+      "parse_time_ms": 1.01
+    },
+    "qos_profile": {
+      "urgency_level": "low",
+      "latency_budget_ms": 500,
+      "latency_target_ms": 200,
+      "throughput_req_kbps": 8647,
+      "reliability_pct": 99.0,
+      "criticality_score": 0.5699,
+      "fuzzy_memberships": {
+        "background": 0.5,
+        "low": 1.0,
+        "medium": 0.0,
+        "high": 0.0,
+        "critical": 0.0
+      },
+      "fuzzy_raw_score": 0.2,
+      "weight_domain": 0.5,
+      "weight_subtype": 0.5,
+      "weight_llm_conf": 0.833,
+      "weight_realtime": 0.6,
+      "real_time_required": false,
+      "gpu_required": true,
+      "offload_permitted": true,
+      "preferred_tier": "cloud",
+      "fallback_tiers": [
+        "fog",
+        "edge"
+      ],
+      "sla_violation_cost": 5.7,
+      "profiling_time_ms": 0.0
+    },
+    "classification": {
+      "primary_class": "general.digital_twin",
+      "secondary_class": "general.digital_twin",
+      "compute_class": "llm_heavy",
+      "taxonomy_path": "general/simulation/digital_twin",
+      "nb_posterior_probs": {
+        "digital_twin": 0.798856,
+        "smart_environment": 0.027536,
+        "medical_imaging": 0.025579,
+        "federated_learning": 0.025579,
+        "emergency_care": 0.024964,
+        "process_control": 0.024964,
+        "predictive_maintenance": 0.024367,
+        "quality_control": 0.024367,
+        "remote_monitoring": 0.023787
+      },
+      "nb_top_class": "digital_twin",
+      "nb_confidence": 0.798856,
+      "nb_confidence_gap": 0.77132,
+      "estimated_cpu_cores": 7.9,
+      "estimated_ram_mb": 5118,
+      "estimated_gpu_mb": 1512,
+      "estimated_bw_kbps": 8647,
+      "model_size_class": "8b",
+      "llm_refinement_used": false,
+      "classification_ms": 0.0
+    },
+    "resource_snapshot": {
+      "timestamp": 1777474537.972423,
+      "total_nodes": 9,
+      "available_nodes": {
+        "cloud": 1,
+        "fog": 2,
+        "edge": 4,
+        "local": 2
+      },
+      "overloaded_nodes": [],
+      "offline_nodes": [],
+      "tier_avg_cpu_pct": {
+        "cloud": 0.0,
+        "fog": 0.0,
+        "edge": 0.0,
+        "local": 0.0
+      },
+      "tier_avg_ram_pct": {
+        "cloud": 0.0,
+        "fog": 0.0,
+        "edge": 0.0,
+        "local": 0.0
+      },
+      "tier_free_gpu_mb": {
+        "cloud": 751449,
+        "fog": 49175,
+        "edge": 0,
+        "local": 0
+      },
+      "tier_ema_cpu": {
+        "cloud": 0.0,
+        "fog": 0.0,
+        "edge": 0.0,
+        "local": 0.0
+      },
+      "tier_ema_ram": {
+        "cloud": 0.0,
+        "fog": 0.0,
+        "edge": 0.0,
+        "local": 0.0
+      },
+      "sla_violations": [],
+      "monitoring_ms": 0.0
+    },
+    "placement": {
+      "instance_id": "4d2c2f68",
+      "selected_node_id": "",
+      "selected_tier": "",
+      "selected_hw_class": "",
+      "topsis_cc": 0.0,
+      "topsis_ranking": [
+        {
+          "node_id": "C01-B9CE",
+          "tier": "cloud",
+          "cc": 0.0
+        },
+        {
+          "node_id": "F01-C08F",
+          "tier": "fog",
+          "cc": 0.0
+        },
+        {
+          "node_id": "F02-FFF6",
+          "tier": "fog",
+          "cc": 0.0
+        }
+      ],
+      "placement_score": 0.0,
+      "latency_estimate_ms": 0.0,
+      "cpu_fit_pct": 0.0,
+      "ram_fit_pct": 0.0,
+      "admission_status": "rejected",
+      "rejection_reason": "no_feasible_node_all_tiers",
+      "alternatives_tried": [
+        {
+          "tier": "edge",
+          "reason": "no_feasible_node",
+          "checked": [
+            [
+              "E01-2C5F",
+              "gpu_insufficient (0 < 1512 MB)"
+            ],
+            [
+              "E02-DB15",
+              "gpu_insufficient (0 < 1512 MB)"
+            ],
+            [
+              "E03-E995",
+              "gpu_insufficient (0 < 1512 MB)"
+            ]
+          ]
+        }
+      ],
+      "placement_ms": 0.0
+    },
+    "offload": {
+      "triggered": false,
+      "trigger_reason": "",
+      "source_node_id": "",
+      "source_ema_cpu": 0.0,
+      "source_ema_ram": 0.0,
+      "target_node_id": "",
+      "target_tier": "",
+      "target_ema_cpu": 0.0,
+      "apps_offloaded": [],
+      "offload_latency_ms": 0.0,
+      "success": false
+    },
+    "final_status": "rejected",
+    "total_pipeline_ms": 1.01,
+    "timestamp": 1777474537.971414
+  },
+  {
+    "instance_id": "8642c32e",
+    "intent_text": "Automotive body panel paint defect camera system detecting orange peel at 95cm/s line speed.",
+    "intent_profile": {
+      "detected_domain": "industrial",
+      "detected_subtype": "quality_control",
+      "key_entities": [
+        "Automotive"
+      ],
+      "action_verbs": [
+        "detect"
+      ],
+      "numeric_constraints": {},
+      "urgency_signals": [],
+      "tfidf_best_class": "quality_control",
+      "tfidf_cosine_sim": 0.429207,
+      "tfidf_top_terms": [
+        "paint",
+        "panel",
+        "defect",
+        "camera"
+      ],
+      "llm_confidence": 0.938,
+      "llm_reasoning": "Keyword evidence in intent maps to industrial/quality_control. Urgency=high from temporal/safety signals.",
+      "parse_time_ms": 0.0
+    },
+    "qos_profile": {
+      "urgency_level": "low",
+      "latency_budget_ms": 33,
+      "latency_target_ms": 16,
+      "throughput_req_kbps": 25513,
+      "reliability_pct": 99.0,
+      "criticality_score": 0.6726,
+      "fuzzy_memberships": {
+        "background": 0.5,
+        "low": 1.0,
+        "medium": 0.0,
+        "high": 0.0,
+        "critical": 0.0
+      },
+      "fuzzy_raw_score": 0.2,
+      "weight_domain": 0.85,
+      "weight_subtype": 0.7,
+      "weight_llm_conf": 0.938,
+      "weight_realtime": 1.0,
+      "real_time_required": true,
+      "gpu_required": true,
+      "offload_permitted": false,
+      "preferred_tier": "cloud",
+      "fallback_tiers": [
+        "fog",
+        "edge"
+      ],
+      "sla_violation_cost": 6.73,
+      "profiling_time_ms": 0.0
+    },
+    "classification": {
+      "primary_class": "industrial.quality_control",
+      "secondary_class": "industrial.quality_control",
+      "compute_class": "gpu_heavy",
+      "taxonomy_path": "industrial/resource_intensive/quality_control",
+      "nb_posterior_probs": {
+        "quality_control": 0.660569,
+        "smart_environment": 0.045528,
+        "medical_imaging": 0.04292,
+        "federated_learning": 0.04292,
+        "emergency_care": 0.042093,
+        "process_control": 0.042093,
+        "digital_twin": 0.042093,
+        "predictive_maintenance": 0.041286,
+        "remote_monitoring": 0.040497
+      },
+      "nb_top_class": "quality_control",
+      "nb_confidence": 0.660569,
+      "nb_confidence_gap": 0.615041,
+      "estimated_cpu_cores": 11.31,
+      "estimated_ram_mb": 27988,
+      "estimated_gpu_mb": 10799,
+      "estimated_bw_kbps": 25513,
+      "model_size_class": "8b",
+      "llm_refinement_used": false,
+      "classification_ms": 1.0
+    },
+    "resource_snapshot": {
+      "timestamp": 1777474537.9754248,
+      "total_nodes": 9,
+      "available_nodes": {
+        "cloud": 1,
+        "fog": 2,
+        "edge": 4,
+        "local": 2
+      },
+      "overloaded_nodes": [],
+      "offline_nodes": [],
+      "tier_avg_cpu_pct": {
+        "cloud": 0.0,
+        "fog": 0.0,
+        "edge": 0.0,
+        "local": 0.0
+      },
+      "tier_avg_ram_pct": {
+        "cloud": 0.0,
+        "fog": 0.0,
+        "edge": 0.0,
+        "local": 0.0
+      },
+      "tier_free_gpu_mb": {
+        "cloud": 751449,
+        "fog": 49175,
+        "edge": 0,
+        "local": 0
+      },
+      "tier_ema_cpu": {
+        "cloud": 0.0,
+        "fog": 0.0,
+        "edge": 0.0,
+        "local": 0.0
+      },
+      "tier_ema_ram": {
+        "cloud": 0.0,
+        "fog": 0.0,
+        "edge": 0.0,
+        "local": 0.0
+      },
+      "sla_violations": [],
+      "monitoring_ms": 0.0
+    },
+    "placement": {
+      "instance_id": "8642c32e",
+      "selected_node_id": "",
+      "selected_tier": "",
+      "selected_hw_class": "",
+      "topsis_cc": 0.0,
+      "topsis_ranking": [
+        {
+          "node_id": "C01-B9CE",
+          "tier": "cloud",
+          "cc": 0.0
+        }
+      ],
+      "placement_score": 0.0,
+      "latency_estimate_ms": 0.0,
+      "cpu_fit_pct": 0.0,
+      "ram_fit_pct": 0.0,
+      "admission_status": "rejected",
+      "rejection_reason": "no_feasible_node_all_tiers",
+      "alternatives_tried": [
+        {
+          "tier": "fog",
+          "reason": "no_feasible_node",
+          "checked": [
+            [
+              "F01-C08F",
+              "latency_exceeds_deadline (37.11 > 33 ms)"
+            ],
+            [
+              "F02-FFF6",
+              "latency_exceeds_deadline (37.77 > 33 ms)"
+            ]
+          ]
+        },
+        {
+          "tier": "edge",
+          "reason": "no_feasible_node",
+          "checked": [
+            [
+              "E01-2C5F",
+              "gpu_insufficient (0 < 10799 MB)"
+            ],
+            [
+              "E02-DB15",
+              "gpu_insufficient (0 < 10799 MB)"
+            ],
+            [
+              "E03-E995",
+              "cpu_insufficient (11.0 < 11.31)"
+            ]
+          ]
+        }
+      ],
+      "placement_ms": 0.0
+    },
+    "offload": {
+      "triggered": false,
+      "trigger_reason": "",
+      "source_node_id": "",
+      "source_ema_cpu": 0.0,
+      "source_ema_ram": 0.0,
+      "target_node_id": "",
+      "target_tier": "",
+      "target_ema_cpu": 0.0,
+      "apps_offloaded": [],
+      "offload_latency_ms": 0.0,
+      "success": false
+    },
+    "final_status": "rejected",
+    "total_pipeline_ms": 1.0,
+    "timestamp": 1777474537.9744244
+  },
+  {
+    "instance_id": "5deffd49",
+    "intent_text": "Bone density DEXA scan, patient 68-year-old female, osteoporosis risk stratification needed.",
+    "intent_profile": {
+      "detected_domain": "general",
+      "detected_subtype": "smart_environment",
+      "key_entities": [
+        "Bone",
+        "DEXA"
+      ],
+      "action_verbs": [],
+      "numeric_constraints": {},
+      "urgency_signals": [
+        "needed"
+      ],
+      "tfidf_best_class": "medical_imaging",
+      "tfidf_cosine_sim": 0.492366,
+      "tfidf_top_terms": [
+        "scan",
+        "bone",
+        "density"
+      ],
+      "llm_confidence": 0.784,
+      "llm_reasoning": "Keyword evidence in intent maps to general/smart_environment. Urgency=low from temporal/safety signals.",
+      "parse_time_ms": 0.0
+    },
+    "qos_profile": {
+      "urgency_level": "low",
+      "latency_budget_ms": 1000.0,
+      "latency_target_ms": 500.0,
+      "throughput_req_kbps": 15778,
+      "reliability_pct": 99.0,
+      "criticality_score": 0.4751,
+      "fuzzy_memberships": {
+        "background": 0.0,
+        "low": 1.0,
+        "medium": 0.0,
+        "high": 0.0,
+        "critical": 0.0
+      },
+      "fuzzy_raw_score": 0.3,
+      "weight_domain": 0.5,
+      "weight_subtype": 0.25,
+      "weight_llm_conf": 0.784,
+      "weight_realtime": 0.6,
+      "real_time_required": false,
+      "gpu_required": true,
+      "offload_permitted": true,
+      "preferred_tier": "cloud",
+      "fallback_tiers": [
+        "fog",
+        "edge"
+      ],
+      "sla_violation_cost": 4.75,
+      "profiling_time_ms": 0.0
+    },
+    "classification": {
+      "primary_class": "general.federated_learning",
+      "secondary_class": "general.medical_imaging",
+      "compute_class": "gpu_heavy",
+      "taxonomy_path": "general/distributed_learning/federated_learning",
+      "nb_posterior_probs": {
+        "medical_imaging": 0.430609,
+        "smart_environment": 0.073916,
+        "federated_learning": 0.071768,
+        "emergency_care": 0.071073,
+        "process_control": 0.071073,
+        "digital_twin": 0.071073,
+        "predictive_maintenance": 0.070388,
+        "quality_control": 0.070388,
+        "remote_monitoring": 0.069713
+      },
+      "nb_top_class": "medical_imaging",
+      "nb_confidence": 0.430609,
+      "nb_confidence_gap": 0.35669300000000004,
+      "estimated_cpu_cores": 7.34,
+      "estimated_ram_mb": 32452,
+      "estimated_gpu_mb": 9425,
+      "estimated_bw_kbps": 15778,
+      "model_size_class": "8b",
+      "llm_refinement_used": true,
+      "classification_ms": 1.0
+    },
+    "resource_snapshot": {
+      "timestamp": 1777474537.9764233,
+      "total_nodes": 9,
+      "available_nodes": {
+        "cloud": 1,
+        "fog": 2,
+        "edge": 4,
+        "local": 2
+      },
+      "overloaded_nodes": [],
+      "offline_nodes": [],
+      "tier_avg_cpu_pct": {
+        "cloud": 0.0,
+        "fog": 0.0,
+        "edge": 0.0,
+        "local": 0.0
+      },
+      "tier_avg_ram_pct": {
+        "cloud": 0.0,
+        "fog": 0.0,
+        "edge": 0.0,
+        "local": 0.0
+      },
+      "tier_free_gpu_mb": {
+        "cloud": 751449,
+        "fog": 49175,
+        "edge": 0,
+        "local": 0
+      },
+      "tier_ema_cpu": {
+        "cloud": 0.0,
+        "fog": 0.0,
+        "edge": 0.0,
+        "local": 0.0
+      },
+      "tier_ema_ram": {
+        "cloud": 0.0,
+        "fog": 0.0,
+        "edge": 0.0,
+        "local": 0.0
+      },
+      "sla_violations": [],
+      "monitoring_ms": 0.0
+    },
+    "placement": {
+      "instance_id": "5deffd49",
+      "selected_node_id": "",
+      "selected_tier": "",
+      "selected_hw_class": "",
+      "topsis_cc": 0.0,
+      "topsis_ranking": [
+        {
+          "node_id": "C01-B9CE",
+          "tier": "cloud",
+          "cc": 0.0
+        },
+        {
+          "node_id": "F01-C08F",
+          "tier": "fog",
+          "cc": 0.0
+        },
+        {
+          "node_id": "F02-FFF6",
+          "tier": "fog",
+          "cc": 0.0
+        }
+      ],
+      "placement_score": 0.0,
+      "latency_estimate_ms": 0.0,
+      "cpu_fit_pct": 0.0,
+      "ram_fit_pct": 0.0,
+      "admission_status": "rejected",
+      "rejection_reason": "no_feasible_node_all_tiers",
+      "alternatives_tried": [
+        {
+          "tier": "edge",
+          "reason": "no_feasible_node",
+          "checked": [
+            [
+              "E01-2C5F",
+              "ram_insufficient (32185 < 32452 MB)"
+            ],
+            [
+              "E02-DB15",
+              "gpu_insufficient (0 < 9425 MB)"
+            ],
+            [
+              "E03-E995",
+              "ram_insufficient (32406 < 32452 MB)"
+            ]
+          ]
+        }
+      ],
+      "placement_ms": 0.0
+    },
+    "offload": {
+      "triggered": false,
+      "trigger_reason": "",
+      "source_node_id": "",
+      "source_ema_cpu": 0.0,
+      "source_ema_ram": 0.0,
+      "target_node_id": "",
+      "target_tier": "",
+      "target_ema_cpu": 0.0,
+      "apps_offloaded": [],
+      "offload_latency_ms": 0.0,
+      "success": false
+    },
+    "final_status": "rejected",
+    "total_pipeline_ms": 1.0,
+    "timestamp": 1777474537.9754248
+  },
+  {
+    "instance_id": "fa444ff9",
+    "intent_text": "Echocardiogram video 60fps, automated ejection fraction measurement and wall motion scoring required.",
+    "intent_profile": {
+      "detected_domain": "healthcare",
+      "detected_subtype": "medical_imaging",
+      "key_entities": [
+        "Echocardiogram"
+      ],
+      "action_verbs": [
+        "measure"
+      ],
+      "numeric_constraints": {},
+      "urgency_signals": [
+        "required"
+      ],
+      "tfidf_best_class": "medical_imaging",
+      "tfidf_cosine_sim": 0.213201,
+      "tfidf_top_terms": [
+        "echocardiogram"
+      ],
+      "llm_confidence": 0.857,
+      "llm_reasoning": "Keyword evidence in intent maps to healthcare/medical_imaging. Urgency=medium from temporal/safety signals.",
+      "parse_time_ms": 1.0
+    },
+    "qos_profile": {
+      "urgency_level": "medium",
+      "latency_budget_ms": 200.0,
+      "latency_target_ms": 100.0,
+      "throughput_req_kbps": 37190,
+      "reliability_pct": 99.0,
+      "criticality_score": 0.7585,
+      "fuzzy_memberships": {
+        "background": 0.0,
+        "low": 0.6667,
+        "medium": 0.6667,
+        "high": 0.0,
+        "critical": 0.0
+      },
+      "fuzzy_raw_score": 0.4,
+      "weight_domain": 1.0,
+      "weight_subtype": 0.6,
+      "weight_llm_conf": 0.857,
+      "weight_realtime": 0.6,
+      "real_time_required": false,
+      "gpu_required": true,
+      "offload_permitted": true,
+      "preferred_tier": "fog",
+      "fallback_tiers": [
+        "edge",
+        "cloud"
+      ],
+      "sla_violation_cost": 7.58,
+      "profiling_time_ms": 0.0
+    },
+    "classification": {
+      "primary_class": "healthcare.medical_imaging",
+      "secondary_class": "healthcare.medical_imaging",
+      "compute_class": "gpu_heavy",
+      "taxonomy_path": "healthcare/resource_intensive/medical_imaging",
+      "nb_posterior_probs": {
+        "medical_imaging": 0.200671,
+        "smart_environment": 0.101826,
+        "federated_learning": 0.100336,
+        "emergency_care": 0.099849,
+        "process_control": 0.099849,
+        "digital_twin": 0.099849,
+        "predictive_maintenance": 0.099366,
+        "quality_control": 0.099366,
+        "remote_monitoring": 0.098889
+      },
+      "nb_top_class": "medical_imaging",
+      "nb_confidence": 0.200671,
+      "nb_confidence_gap": 0.09884499999999999,
+      "estimated_cpu_cores": 14.17,
+      "estimated_ram_mb": 56015,
+      "estimated_gpu_mb": 5519,
+      "estimated_bw_kbps": 37190,
+      "model_size_class": "8b",
+      "llm_refinement_used": true,
+      "classification_ms": 0.0
+    },
+    "resource_snapshot": {
+      "timestamp": 1777474537.9774213,
+      "total_nodes": 9,
+      "available_nodes": {
+        "cloud": 1,
+        "fog": 2,
+        "edge": 4,
+        "local": 2
+      },
+      "overloaded_nodes": [],
+      "offline_nodes": [],
+      "tier_avg_cpu_pct": {
+        "cloud": 0.0,
+        "fog": 0.0,
+        "edge": 0.0,
+        "local": 0.0
+      },
+      "tier_avg_ram_pct": {
+        "cloud": 0.0,
+        "fog": 0.0,
+        "edge": 0.0,
+        "local": 0.0
+      },
+      "tier_free_gpu_mb": {
+        "cloud": 751449,
+        "fog": 49175,
+        "edge": 0,
+        "local": 0
+      },
+      "tier_ema_cpu": {
+        "cloud": 0.0,
+        "fog": 0.0,
+        "edge": 0.0,
+        "local": 0.0
+      },
+      "tier_ema_ram": {
+        "cloud": 0.0,
+        "fog": 0.0,
+        "edge": 0.0,
+        "local": 0.0
+      },
+      "sla_violations": [],
+      "monitoring_ms": 0.0
+    },
+    "placement": {
+      "instance_id": "fa444ff9",
+      "selected_node_id": "",
+      "selected_tier": "",
+      "selected_hw_class": "",
+      "topsis_cc": 0.0,
+      "topsis_ranking": [
+        {
+          "node_id": "F01-C08F",
+          "tier": "fog",
+          "cc": 0.0
+        },
+        {
+          "node_id": "C01-B9CE",
+          "tier": "cloud",
+          "cc": 0.0
+        }
+      ],
+      "placement_score": 0.0,
+      "latency_estimate_ms": 0.0,
+      "cpu_fit_pct": 0.0,
+      "ram_fit_pct": 0.0,
+      "admission_status": "rejected",
+      "rejection_reason": "no_feasible_node_all_tiers",
+      "alternatives_tried": [
+        {
+          "tier": "edge",
+          "reason": "no_feasible_node",
+          "checked": [
+            [
+              "E01-2C5F",
+              "cpu_insufficient (11.6 < 14.17)"
+            ],
+            [
+              "E02-DB15",
+              "cpu_insufficient (13.2 < 14.17)"
+            ],
+            [
+              "E03-E995",
+              "cpu_insufficient (11.0 < 14.17)"
+            ]
+          ]
+        }
+      ],
+      "placement_ms": 0.0
+    },
+    "offload": {
+      "triggered": false,
+      "trigger_reason": "",
+      "source_node_id": "",
+      "source_ema_cpu": 0.0,
+      "source_ema_ram": 0.0,
+      "target_node_id": "",
+      "target_tier": "",
+      "target_ema_cpu": 0.0,
+      "apps_offloaded": [],
+      "offload_latency_ms": 0.0,
+      "success": false
+    },
+    "final_status": "rejected",
+    "total_pipeline_ms": 1.0,
+    "timestamp": 1777474537.9764233
+  },
+  {
+    "instance_id": "695e4176",
+    "intent_text": "Street lighting energy consumption 23% above monthly baseline, dimming schedule optimisation requested.",
+    "intent_profile": {
+      "detected_domain": "general",
+      "detected_subtype": "smart_environment",
+      "key_entities": [
+        "Street"
+      ],
+      "action_verbs": [
+        "schedule"
+      ],
+      "numeric_constraints": {
+        "percentage": [
+          23.0
+        ]
+      },
+      "urgency_signals": [],
+      "tfidf_best_class": "smart_environment",
+      "tfidf_cosine_sim": 0.414909,
+      "tfidf_top_terms": [
+        "energy",
+        "lighting",
+        "consumption"
+      ],
+      "llm_confidence": 0.817,
+      "llm_reasoning": "Keyword evidence in intent maps to general/smart_environment. Urgency=low from temporal/safety signals.",
+      "parse_time_ms": 1.0
+    },
+    "qos_profile": {
+      "urgency_level": "low",
+      "latency_budget_ms": 1000.0,
+      "latency_target_ms": 500.0,
+      "throughput_req_kbps": 113,
+      "reliability_pct": 99.0,
+      "criticality_score": 0.48,
+      "fuzzy_memberships": {
+        "background": 0.5,
+        "low": 1.0,
+        "medium": 0.0,
+        "high": 0.0,
+        "critical": 0.0
+      },
+      "fuzzy_raw_score": 0.2,
+      "weight_domain": 0.5,
+      "weight_subtype": 0.25,
+      "weight_llm_conf": 0.817,
+      "weight_realtime": 0.6,
+      "real_time_required": false,
+      "gpu_required": false,
+      "offload_permitted": true,
+      "preferred_tier": "cloud",
+      "fallback_tiers": [
+        "fog",
+        "edge"
+      ],
+      "sla_violation_cost": 4.8,
+      "profiling_time_ms": 0.0
+    },
+    "classification": {
+      "primary_class": "general.federated_learning",
+      "secondary_class": "general.smart_environment",
+      "compute_class": "gpu_light",
+      "taxonomy_path": "general/distributed_learning/federated_learning",
+      "nb_posterior_probs": {
+        "smart_environment": 0.515578,
+        "medical_imaging": 0.061659,
+        "federated_learning": 0.061659,
+        "emergency_care": 0.060765,
+        "process_control": 0.060765,
+        "digital_twin": 0.060765,
+        "predictive_maintenance": 0.059889,
+        "quality_control": 0.059889,
+        "remote_monitoring": 0.059029
+      },
+      "nb_top_class": "smart_environment",
+      "nb_confidence": 0.515578,
+      "nb_confidence_gap": 0.45391899999999996,
+      "estimated_cpu_cores": 1.28,
+      "estimated_ram_mb": 116,
+      "estimated_gpu_mb": 0,
+      "estimated_bw_kbps": 113,
+      "model_size_class": "3b",
+      "llm_refinement_used": true,
+      "classification_ms": 0.0
+    },
+    "resource_snapshot": {
+      "timestamp": 1777474537.9784234,
+      "total_nodes": 9,
+      "available_nodes": {
+        "cloud": 1,
+        "fog": 2,
+        "edge": 4,
+        "local": 2
+      },
+      "overloaded_nodes": [],
+      "offline_nodes": [],
+      "tier_avg_cpu_pct": {
+        "cloud": 0.0,
+        "fog": 0.0,
+        "edge": 0.0,
+        "local": 0.0
+      },
+      "tier_avg_ram_pct": {
+        "cloud": 0.0,
+        "fog": 0.0,
+        "edge": 0.0,
+        "local": 0.0
+      },
+      "tier_free_gpu_mb": {
+        "cloud": 751449,
+        "fog": 49175,
+        "edge": 0,
+        "local": 0
+      },
+      "tier_ema_cpu": {
+        "cloud": 0.0,
+        "fog": 0.0,
+        "edge": 0.0,
+        "local": 0.0
+      },
+      "tier_ema_ram": {
+        "cloud": 0.0,
+        "fog": 0.0,
+        "edge": 0.0,
+        "local": 0.0
+      },
+      "sla_violations": [],
+      "monitoring_ms": 0.0
+    },
+    "placement": {
+      "instance_id": "695e4176",
+      "selected_node_id": "",
+      "selected_tier": "",
+      "selected_hw_class": "",
+      "topsis_cc": 0.0,
+      "topsis_ranking": [
+        {
+          "node_id": "C01-B9CE",
+          "tier": "cloud",
+          "cc": 0.0
+        },
+        {
+          "node_id": "F01-C08F",
+          "tier": "fog",
+          "cc": 0.0
+        },
+        {
+          "node_id": "F02-FFF6",
+          "tier": "fog",
+          "cc": 0.0
+        },
+        {
+          "node_id": "E01-2C5F",
+          "tier": "edge",
+          "cc": 0.0
+        },
+        {
+          "node_id": "E02-DB15",
+          "tier": "edge",
+          "cc": 0.0
+        },
+        {
+          "node_id": "E03-E995",
+          "tier": "edge",
+          "cc": 0.0
+        },
+        {
+          "node_id": "E04-3E9F",
+          "tier": "edge",
+          "cc": 0.0
+        }
+      ],
+      "placement_score": 0.0,
+      "latency_estimate_ms": 0.0,
+      "cpu_fit_pct": 0.0,
+      "ram_fit_pct": 0.0,
+      "admission_status": "rejected",
+      "rejection_reason": "no_feasible_node_all_tiers",
+      "alternatives_tried": [],
+      "placement_ms": 0.0
+    },
+    "offload": {
+      "triggered": false,
+      "trigger_reason": "",
+      "source_node_id": "",
+      "source_ema_cpu": 0.0,
+      "source_ema_ram": 0.0,
+      "target_node_id": "",
+      "target_tier": "",
+      "target_ema_cpu": 0.0,
+      "apps_offloaded": [],
+      "offload_latency_ms": 0.0,
+      "success": false
+    },
+    "final_status": "rejected",
+    "total_pipeline_ms": 1.0,
+    "timestamp": 1777474537.9774213
+  },
+  {
+    "instance_id": "6d4c9c9a",
+    "intent_text": "Bone density DEXA scan, patient 68-year-old female, osteoporosis risk stratification needed.",
+    "intent_profile": {
+      "detected_domain": "general",
+      "detected_subtype": "smart_environment",
+      "key_entities": [
+        "Bone",
+        "DEXA"
+      ],
+      "action_verbs": [],
+      "numeric_constraints": {},
+      "urgency_signals": [
+        "needed"
+      ],
+      "tfidf_best_class": "medical_imaging",
+      "tfidf_cosine_sim": 0.492366,
+      "tfidf_top_terms": [
+        "scan",
+        "bone",
+        "density"
+      ],
+      "llm_confidence": 0.871,
+      "llm_reasoning": "Keyword evidence in intent maps to general/smart_environment. Urgency=low from temporal/safety signals.",
+      "parse_time_ms": 1.51
+    },
+    "qos_profile": {
+      "urgency_level": "low",
+      "latency_budget_ms": 1000.0,
+      "latency_target_ms": 500.0,
+      "throughput_req_kbps": 39885,
+      "reliability_pct": 99.0,
+      "criticality_score": 0.4881,
+      "fuzzy_memberships": {
+        "background": 0.0,
+        "low": 1.0,
+        "medium": 0.0,
+        "high": 0.0,
+        "critical": 0.0
+      },
+      "fuzzy_raw_score": 0.3,
+      "weight_domain": 0.5,
+      "weight_subtype": 0.25,
+      "weight_llm_conf": 0.871,
+      "weight_realtime": 0.6,
+      "real_time_required": false,
+      "gpu_required": true,
+      "offload_permitted": true,
+      "preferred_tier": "cloud",
+      "fallback_tiers": [
+        "fog",
+        "edge"
+      ],
+      "sla_violation_cost": 4.88,
+      "profiling_time_ms": 0.0
+    },
+    "classification": {
+      "primary_class": "general.federated_learning",
+      "secondary_class": "general.medical_imaging",
+      "compute_class": "gpu_heavy",
+      "taxonomy_path": "general/distributed_learning/federated_learning",
+      "nb_posterior_probs": {
+        "medical_imaging": 0.430609,
+        "smart_environment": 0.073916,
+        "federated_learning": 0.071768,
+        "emergency_care": 0.071073,
+        "process_control": 0.071073,
+        "digital_twin": 0.071073,
+        "predictive_maintenance": 0.070388,
+        "quality_control": 0.070388,
+        "remote_monitoring": 0.069713
+      },
+      "nb_top_class": "medical_imaging",
+      "nb_confidence": 0.430609,
+      "nb_confidence_gap": 0.35669300000000004,
+      "estimated_cpu_cores": 4.95,
+      "estimated_ram_mb": 64664,
+      "estimated_gpu_mb": 24363,
+      "estimated_bw_kbps": 39885,
+      "model_size_class": "8b",
+      "llm_refinement_used": true,
+      "classification_ms": 0.0
+    },
+    "resource_snapshot": {
+      "timestamp": 1777474537.9799333,
+      "total_nodes": 9,
+      "available_nodes": {
+        "cloud": 1,
+        "fog": 2,
+        "edge": 4,
+        "local": 2
+      },
+      "overloaded_nodes": [],
+      "offline_nodes": [],
+      "tier_avg_cpu_pct": {
+        "cloud": 0.0,
+        "fog": 0.0,
+        "edge": 0.0,
+        "local": 0.0
+      },
+      "tier_avg_ram_pct": {
+        "cloud": 0.0,
+        "fog": 0.0,
+        "edge": 0.0,
+        "local": 0.0
+      },
+      "tier_free_gpu_mb": {
+        "cloud": 751449,
+        "fog": 49175,
+        "edge": 0,
+        "local": 0
+      },
+      "tier_ema_cpu": {
+        "cloud": 0.0,
+        "fog": 0.0,
+        "edge": 0.0,
+        "local": 0.0
+      },
+      "tier_ema_ram": {
+        "cloud": 0.0,
+        "fog": 0.0,
+        "edge": 0.0,
+        "local": 0.0
+      },
+      "sla_violations": [],
+      "monitoring_ms": 1.01
+    },
+    "placement": {
+      "instance_id": "6d4c9c9a",
+      "selected_node_id": "",
+      "selected_tier": "",
+      "selected_hw_class": "",
+      "topsis_cc": 0.0,
+      "topsis_ranking": [
+        {
+          "node_id": "C01-B9CE",
+          "tier": "cloud",
+          "cc": 0.0
+        }
+      ],
+      "placement_score": 0.0,
+      "latency_estimate_ms": 0.0,
+      "cpu_fit_pct": 0.0,
+      "ram_fit_pct": 0.0,
+      "admission_status": "rejected",
+      "rejection_reason": "no_feasible_node_all_tiers",
+      "alternatives_tried": [
+        {
+          "tier": "fog",
+          "reason": "no_feasible_node",
+          "checked": [
+            [
+              "F01-C08F",
+              "ram_insufficient (62869 < 64664 MB)"
+            ],
+            [
+              "F02-FFF6",
+              "ram_insufficient (55917 < 64664 MB)"
+            ]
+          ]
+        },
+        {
+          "tier": "edge",
+          "reason": "no_feasible_node",
+          "checked": [
+            [
+              "E01-2C5F",
+              "ram_insufficient (32185 < 64664 MB)"
+            ],
+            [
+              "E02-DB15",
+              "ram_insufficient (37311 < 64664 MB)"
+            ],
+            [
+              "E03-E995",
+              "ram_insufficient (32406 < 64664 MB)"
+            ]
+          ]
+        }
+      ],
+      "placement_ms": 0.0
+    },
+    "offload": {
+      "triggered": false,
+      "trigger_reason": "",
+      "source_node_id": "",
+      "source_ema_cpu": 0.0,
+      "source_ema_ram": 0.0,
+      "target_node_id": "",
+      "target_tier": "",
+      "target_ema_cpu": 0.0,
+      "apps_offloaded": [],
+      "offload_latency_ms": 0.0,
+      "success": false
+    },
+    "final_status": "rejected",
+    "total_pipeline_ms": 2.52,
+    "timestamp": 1777474537.9784234
+  },
+  {
+    "instance_id": "ac2ae7c3",
+    "intent_text": "Hydraulic pump pressure dropping 8 bar below set point intermittently, cavitation signature detected.",
+    "intent_profile": {
+      "detected_domain": "industrial",
+      "detected_subtype": "predictive_maintenance",
+      "key_entities": [
+        "Hydraulic"
+      ],
+      "action_verbs": [
+        "detect"
+      ],
+      "numeric_constraints": {
+        "pressure_bar": [
+          8.0
+        ]
+      },
+      "urgency_signals": [
+        "dropping"
+      ],
+      "tfidf_best_class": "predictive_maintenance",
+      "tfidf_cosine_sim": 0.338457,
+      "tfidf_top_terms": [
+        "pump",
+        "hydraulic",
+        "pressure"
+      ],
+      "llm_confidence": 0.819,
+      "llm_reasoning": "Keyword evidence in intent maps to industrial/predictive_maintenance. Urgency=high from temporal/safety signals.",
+      "parse_time_ms": 0.0
+    },
+    "qos_profile": {
+      "urgency_level": "high",
+      "latency_budget_ms": 50.0,
+      "latency_target_ms": 20.0,
+      "throughput_req_kbps": 3805,
+      "reliability_pct": 99.9,
+      "criticality_score": 0.8403,
+      "fuzzy_memberships": {
+        "background": 0.0,
+        "low": 0.0,
+        "medium": 0.3333,
+        "high": 1.0,
+        "critical": 0.0
+      },
+      "fuzzy_raw_score": 0.7,
+      "weight_domain": 0.85,
+      "weight_subtype": 0.75,
+      "weight_llm_conf": 0.819,
+      "weight_realtime": 1.0,
+      "real_time_required": true,
+      "gpu_required": true,
+      "offload_permitted": true,
+      "preferred_tier": "edge",
+      "fallback_tiers": [
+        "fog",
+        "cloud"
+      ],
+      "sla_violation_cost": 8.4,
+      "profiling_time_ms": 0.0
+    },
+    "classification": {
+      "primary_class": "industrial.predictive_maintenance",
+      "secondary_class": "industrial.predictive_maintenance",
+      "compute_class": "cpu_only",
+      "taxonomy_path": "industrial/predictive/predictive_maintenance",
+      "nb_posterior_probs": {
+        "predictive_maintenance": 0.417108,
+        "emergency_care": 0.105803,
+        "process_control": 0.105803,
+        "remote_monitoring": 0.10278,
+        "smart_environment": 0.056107,
+        "medical_imaging": 0.053679,
+        "federated_learning": 0.053679,
+        "digital_twin": 0.052901,
+        "quality_control": 0.052139
+      },
+      "nb_top_class": "predictive_maintenance",
+      "nb_confidence": 0.417108,
+      "nb_confidence_gap": 0.311305,
+      "estimated_cpu_cores": 2.27,
+      "estimated_ram_mb": 1165,
+      "estimated_gpu_mb": 2370,
+      "estimated_bw_kbps": 3805,
+      "model_size_class": "1b",
+      "llm_refinement_used": true,
+      "classification_ms": 0.0
+    },
+    "resource_snapshot": {
+      "timestamp": 1777474537.980945,
+      "total_nodes": 9,
+      "available_nodes": {
+        "cloud": 1,
+        "fog": 2,
+        "edge": 4,
+        "local": 2
+      },
+      "overloaded_nodes": [],
+      "offline_nodes": [],
+      "tier_avg_cpu_pct": {
+        "cloud": 0.0,
+        "fog": 0.0,
+        "edge": 0.0,
+        "local": 0.0
+      },
+      "tier_avg_ram_pct": {
+        "cloud": 0.0,
+        "fog": 0.0,
+        "edge": 0.0,
+        "local": 0.0
+      },
+      "tier_free_gpu_mb": {
+        "cloud": 751449,
+        "fog": 49175,
+        "edge": 0,
+        "local": 0
+      },
+      "tier_ema_cpu": {
+        "cloud": 0.0,
+        "fog": 0.0,
+        "edge": 0.0,
+        "local": 0.0
+      },
+      "tier_ema_ram": {
+        "cloud": 0.0,
+        "fog": 0.0,
+        "edge": 0.0,
+        "local": 0.0
+      },
+      "sla_violations": [],
+      "monitoring_ms": 1.01
+    },
+    "placement": {
+      "instance_id": "ac2ae7c3",
+      "selected_node_id": "",
+      "selected_tier": "",
+      "selected_hw_class": "",
+      "topsis_cc": 0.0,
+      "topsis_ranking": [
+        {
+          "node_id": "F01-C08F",
+          "tier": "fog",
+          "cc": 0.0
+        },
+        {
+          "node_id": "F02-FFF6",
+          "tier": "fog",
+          "cc": 0.0
+        },
+        {
+          "node_id": "C01-B9CE",
+          "tier": "cloud",
+          "cc": 0.0
+        }
+      ],
+      "placement_score": 0.0,
+      "latency_estimate_ms": 0.0,
+      "cpu_fit_pct": 0.0,
+      "ram_fit_pct": 0.0,
+      "admission_status": "rejected",
+      "rejection_reason": "no_feasible_node_all_tiers",
+      "alternatives_tried": [
+        {
+          "tier": "edge",
+          "reason": "no_feasible_node",
+          "checked": [
+            [
+              "E01-2C5F",
+              "gpu_insufficient (0 < 2370 MB)"
+            ],
+            [
+              "E02-DB15",
+              "gpu_insufficient (0 < 2370 MB)"
+            ],
+            [
+              "E03-E995",
+              "gpu_insufficient (0 < 2370 MB)"
+            ]
+          ]
+        }
+      ],
+      "placement_ms": 0.0
+    },
+    "offload": {
+      "triggered": false,
+      "trigger_reason": "",
+      "source_node_id": "",
+      "source_ema_cpu": 0.0,
+      "source_ema_ram": 0.0,
+      "target_node_id": "",
+      "target_tier": "",
+      "target_ema_cpu": 0.0,
+      "apps_offloaded": [],
+      "offload_latency_ms": 0.0,
+      "success": false
+    },
+    "final_status": "rejected",
+    "total_pipeline_ms": 1.01,
+    "timestamp": 1777474537.980945
+  }
+]

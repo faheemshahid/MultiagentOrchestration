@@ -1,0 +1,66 @@
+{
+  "multi_agent_TOPSIS": {
+    "placed_pct": 0.0,
+    "rejected_pct": 100.0,
+    "avg_latency_ms": 0.0,
+    "avg_decision_ms": 1.37,
+    "avg_score": 0.0,
+    "tier_distribution": {},
+    "edge_pct": 0.0,
+    "cloud_pct": 0.0
+  },
+  "B1_Cloud-Only": {
+    "placed_pct": 100.0,
+    "rejected_pct": 0.0,
+    "avg_latency_ms": 0.0,
+    "avg_decision_ms": 0.0,
+    "avg_score": 100.0,
+    "tier_distribution": {
+      "cloud": 15
+    },
+    "edge_pct": 0.0,
+    "cloud_pct": 100.0
+  },
+  "B2_Round-Robin": {
+    "placed_pct": 100.0,
+    "rejected_pct": 0.0,
+    "avg_latency_ms": 15.95,
+    "avg_decision_ms": 0.07,
+    "avg_score": 50.0,
+    "tier_distribution": {
+      "cloud": 7,
+      "fog": 6,
+      "edge": 2
+    },
+    "edge_pct": 13.33,
+    "cloud_pct": 46.67
+  },
+  "B3_Static-Threshold": {
+    "placed_pct": 100.0,
+    "rejected_pct": 0.0,
+    "avg_latency_ms": 16.52,
+    "avg_decision_ms": 0.0,
+    "avg_score": 68.73,
+    "tier_distribution": {
+      "fog": 6,
+      "cloud": 6,
+      "edge": 3
+    },
+    "edge_pct": 20.0,
+    "cloud_pct": 40.0
+  },
+  "B4_Greedy-First-Fit": {
+    "placed_pct": 100.0,
+    "rejected_pct": 0.0,
+    "avg_latency_ms": 16.52,
+    "avg_decision_ms": 0.0,
+    "avg_score": 68.73,
+    "tier_distribution": {
+      "fog": 6,
+      "cloud": 6,
+      "edge": 3
+    },
+    "edge_pct": 20.0,
+    "cloud_pct": 40.0
+  }
+}

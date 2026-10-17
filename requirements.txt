@@ -1,0 +1,65 @@
+# =============================================================================
+# requirements.txt
+# Intent-Aware Multi-Agent AI Orchestration in Edge-Cloud Continuum
+# =============================================================================
+#
+# INSTALL ALL AT ONCE:
+#   pip install -r requirements.txt
+#
+# MINIMUM PYTHON VERSION: 3.10+
+# RECOMMENDED:            3.11
+#
+# TIERS OF DEPENDENCIES:
+#   CORE     — required for OrchestratorAgent.py to run (mock mode)
+#   FIGURES  — required for figures.py (IEEE graph generation)
+#   LLM      — required only for LLM_BACKEND = "ollama" or "llama_cpp"
+#   OPTIONAL — useful for development and debugging
+#
+# NOTE: applications.py, computing_resources.py, agents.py, baselines.py,
+#       and OrchestratorAgent.py use ONLY Python standard library in mock
+#       mode. No pip install is needed to run the system in mock mode.
+#       The packages below are needed for figures.py and LLM inference.
+# =============================================================================
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CORE — figures.py graph generation (mandatory for IEEE figures)
+# ─────────────────────────────────────────────────────────────────────────────
+
+matplotlib>=3.7.0          # all 15 IEEE figures — CDF, box, bar, radar, heatmap
+numpy>=1.24.0              # array operations for CDF, EMA, TOPSIS calculations
+seaborn>=0.12.0            # enhanced heatmap styling (optional but recommended)
+
+# ─────────────────────────────────────────────────────────────────────────────
+# LLM INFERENCE — needed only for LLM_BACKEND = "llama_cpp"
+# Skip this section if using LLM_BACKEND = "mock" or "ollama"
+# For "ollama": install Ollama desktop app from https://ollama.com (no pip needed)
+# ─────────────────────────────────────────────────────────────────────────────
+
+# llama-cpp-python>=0.2.56  # CPU/GPU inference via llama.cpp
+                             # Uncomment when ready to use LLM_BACKEND="llama_cpp"
+                             # Windows install: pip install llama-cpp-python
+                             # For GPU support on Windows with CUDA:
+                             #   set CMAKE_ARGS="-DLLAMA_CUBLAS=on"
+                             #   pip install llama-cpp-python --force-reinstall --no-cache-dir
+
+# ─────────────────────────────────────────────────────────────────────────────
+# OPTIONAL — useful for extended experiments and data analysis
+# ─────────────────────────────────────────────────────────────────────────────
+
+# pandas>=2.0.0             # convenient DataFrame for analysing JSON results
+                             # Uncomment if you want to do extra data analysis
+                             # beyond what figures.py already does
+
+# scipy>=1.10.0             # statistical tests (Mann-Whitney U, Kolmogorov-Smirnov)
+                             # Uncomment for rigorous statistical significance testing
+                             # in the IEEE paper evaluation section
+
+# scikit-learn>=1.3.0       # PR curves, ROC curves, confusion matrix utilities
+                             # Uncomment if you add ML-based classification evaluation
+
+# ─────────────────────────────────────────────────────────────────────────────
+# DEVELOPMENT / DEBUGGING
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ipykernel>=6.0.0          # Jupyter notebook support (optional)
+# rich>=13.0.0              # coloured terminal output (optional)
