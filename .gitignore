@@ -1,0 +1,58 @@
+# ==============================================
+# .gitignore for MultiagentOrchestration
+# Intent-Aware Multi-Agent IoT Orchestration
+# ==============================================
+
+# --- Credentials & secrets ---
+.env
+*.env
+env.local
+secrets.py
+api_keys.py
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# --- Virtual environments ---
+venv/
+.venv/
+env/
+ENV/
+
+# --- PyCharm IDE ---
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# --- Experiment output (large files, regeneratable) ---
+experiment_results/
+figures_output/
+*.json
+!env.example
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+*.ipynb
+
+# --- OS files ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Logs ---
+*.log
+logs/
+
+# --- Backup files ---
+bkp_files/
+*.bak
+*.orig
