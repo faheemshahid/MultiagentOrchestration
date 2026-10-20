@@ -46,7 +46,7 @@ HOW MANY APPS ARE DEPLOYED:
 # ██████████████████████████████████████████████████████████████████████████
 # ─────────────────────────────────────────────────────────────────────────────
 
-# ── Application settings ──────────────────────────────────────────────────────
+# ── Application settings ─2─────────────────────────────────────────────────────
 NUM_APPS:          int   = 100          # total apps to generate and deploy
                                        # 10 = quick test, 30 = paper results
                                        # 100+ = large-scale experiment
@@ -81,14 +81,14 @@ ACTIVE_TIERS: list = [                 # which tiers to include
 #   ACTIVE_TIERS = ["fog", "edge"]     (no cloud, no local)
 #   ACTIVE_TIERS = ["cloud"]           (cloud-only simulation)
 
-NUM_FOG_NODES:   int   = 8            # number of fog gateway nodes
-NUM_EDGE_NODES:  int   = 10            # number of edge compute nodes
-NUM_LOCAL_NODES: int   = 8            # number of local Pi/Jetson nodes
+NUM_FOG_NODES:   int   = 3            # number of fog gateway nodes
+NUM_EDGE_NODES:  int   = 3            # number of edge compute nodes
+NUM_LOCAL_NODES: int   = 3            # number of local Pi/Jetson nodes
 NODE_VARIATION:  float = 0.50         # ±15% variation in node specs
                                        # 0.0 = identical nodes (controlled)
 
 # ── Agent / LLM settings ──────────────────────────────────────────────────────
-LLM_BACKEND:    str  = "mock"         # "mock" | "ollama" | "llama_cpp"
+LLM_BACKEND:    str  = "llama_cpp"         # "mock" | "ollama" | "llama_cpp"
 LLM_MODEL:      str  = "llama3.2:8b-instruct-q4_K_M"
 LLM_HOST:       str  = "http://localhost:11434"
 AGENT_VERBOSE:  bool = True           # True = detailed per-agent output

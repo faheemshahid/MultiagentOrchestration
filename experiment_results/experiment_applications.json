@@ -1,10 +1,10 @@
 [
   {
-    "instance_id": "87db96c0",
+    "instance_id": "97c8460a",
     "spec_key": "remote_monitoring",
     "domain": "healthcare",
     "subtype": "Remote patient monitoring",
-    "timestamp": 1792274978.0883589,
+    "timestamp": 1792497482.9292157,
     "intent_text": "Parkinson's patient wearable showing increased tremor frequency overnight, medication timing review needed.",
     "cpu_cores": 1.41,
     "cpu_freq_mhz": 1745,
@@ -30,11 +30,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "af373785",
+    "instance_id": "9d267377",
     "spec_key": "emergency_care",
     "domain": "healthcare",
     "subtype": "Emergency care",
-    "timestamp": 1792274978.0873446,
+    "timestamp": 1792497482.9272327,
     "intent_text": "Multi-vehicle accident: three critical patients inbound, triage classification and resource allocation needed.",
     "cpu_cores": 2.06,
     "cpu_freq_mhz": 2841,
@@ -60,11 +60,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "522d7e9a",
+    "instance_id": "4aa9f1a0",
     "spec_key": "remote_monitoring",
     "domain": "healthcare",
     "subtype": "Remote patient monitoring",
-    "timestamp": 1792274978.0883589,
+    "timestamp": 1792497482.9292157,
     "intent_text": "Diabetic patient missed insulin injection, CGM trending upward, ketone level requested remotely.",
     "cpu_cores": 3.76,
     "cpu_freq_mhz": 1893,
@@ -90,11 +90,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "2aa0b265",
+    "instance_id": "bb6f5136",
     "spec_key": "remote_monitoring",
     "domain": "healthcare",
     "subtype": "Remote patient monitoring",
-    "timestamp": 1792274978.0873446,
+    "timestamp": 1792497482.9282322,
     "intent_text": "Home oxygen concentrator patient SpO2 reading 91%, lower than usual, feeling slightly breathless.",
     "cpu_cores": 1.79,
     "cpu_freq_mhz": 1019,
@@ -120,11 +120,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "335eeb28",
+    "instance_id": "794b93a9",
     "spec_key": "remote_monitoring",
     "domain": "healthcare",
     "subtype": "Remote patient monitoring",
-    "timestamp": 1792274978.0873446,
+    "timestamp": 1792497482.9272327,
     "intent_text": "Elderly patient fall detected by accelerometer, no response to voice prompt, emergency contact alert.",
     "cpu_cores": 3.51,
     "cpu_freq_mhz": 991,
@@ -150,11 +150,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "c73ebce6",
+    "instance_id": "03fa2769",
     "spec_key": "medical_imaging",
     "domain": "healthcare",
     "subtype": "Medical imaging diagnostics",
-    "timestamp": 1792274978.0873446,
+    "timestamp": 1792497482.9272327,
     "intent_text": "Whole-slide pathology image 40x magnification, identify mitotic figures for cancer staging.",
     "cpu_cores": 4.74,
     "cpu_freq_mhz": 2697,
@@ -180,11 +180,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "a4425dd5",
+    "instance_id": "1e308b29",
     "spec_key": "emergency_care",
     "domain": "healthcare",
     "subtype": "Emergency care",
-    "timestamp": 1792274978.0883589,
+    "timestamp": 1792497482.9292157,
     "intent_text": "Trauma patient arriving in 2 minutes, blood type O-negative, allergic to penicillin \u2014 prep OR now.",
     "cpu_cores": 2.74,
     "cpu_freq_mhz": 2638,
@@ -210,11 +210,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "8af1e683",
+    "instance_id": "8cd9960e",
     "spec_key": "emergency_care",
     "domain": "healthcare",
     "subtype": "Emergency care",
-    "timestamp": 1792274978.0883589,
+    "timestamp": 1792497482.9302156,
     "intent_text": "Infant SpO2 dropped to 78%, ventilator settings require instant adjustment, nurse unresponsive.",
     "cpu_cores": 1.57,
     "cpu_freq_mhz": 3512,
@@ -240,11 +240,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "0aa1f8d6",
+    "instance_id": "643d514a",
     "spec_key": "medical_imaging",
     "domain": "healthcare",
     "subtype": "Medical imaging diagnostics",
-    "timestamp": 1792274978.0873446,
+    "timestamp": 1792497482.9282322,
     "intent_text": "Retinal fundus image for diabetic retinopathy grading, patient has had diabetes for 12 years.",
     "cpu_cores": 3.34,
     "cpu_freq_mhz": 3191,
@@ -270,11 +270,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "a998db5b",
+    "instance_id": "214ba53e",
     "spec_key": "medical_imaging",
     "domain": "healthcare",
     "subtype": "Medical imaging diagnostics",
-    "timestamp": 1792274978.0873446,
+    "timestamp": 1792497482.9272327,
     "intent_text": "Skin lesion dermoscopy image, ABCDE criteria evaluation and melanoma probability score required.",
     "cpu_cores": 3.38,
     "cpu_freq_mhz": 3302,
@@ -300,11 +300,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "2dc5ee2a",
+    "instance_id": "1e7be504",
     "spec_key": "emergency_care",
     "domain": "healthcare",
     "subtype": "Emergency care",
-    "timestamp": 1792274978.0873446,
+    "timestamp": 1792497482.9272327,
     "intent_text": "Post-surgical haemorrhage detected, patient losing 200mL per minute, surgical team emergency page required.",
     "cpu_cores": 1.18,
     "cpu_freq_mhz": 2642,
@@ -330,11 +330,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "d0c3d555",
+    "instance_id": "804d4da8",
     "spec_key": "medical_imaging",
     "domain": "healthcare",
     "subtype": "Medical imaging diagnostics",
-    "timestamp": 1792274978.0868363,
+    "timestamp": 1792497482.9262354,
     "intent_text": "Retinal fundus image for diabetic retinopathy grading, patient has had diabetes for 12 years.",
     "cpu_cores": 7.2,
     "cpu_freq_mhz": 3956,
@@ -360,11 +360,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "4859c89a",
+    "instance_id": "0831fcb7",
     "spec_key": "remote_monitoring",
     "domain": "healthcare",
     "subtype": "Remote patient monitoring",
-    "timestamp": 1792274978.0868363,
+    "timestamp": 1792497482.9262354,
     "intent_text": "Parkinson's patient wearable showing increased tremor frequency overnight, medication timing review needed.",
     "cpu_cores": 1.66,
     "cpu_freq_mhz": 1369,
@@ -390,11 +390,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "d48ca626",
+    "instance_id": "e0e9838a",
     "spec_key": "emergency_care",
     "domain": "healthcare",
     "subtype": "Emergency care",
-    "timestamp": 1792274978.0883589,
+    "timestamp": 1792497482.9302156,
     "intent_text": "Septic shock confirmed, lactate 6.2 mmol/L, initiate sepsis bundle protocol without delay.",
     "cpu_cores": 3.35,
     "cpu_freq_mhz": 2711,
@@ -420,11 +420,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "8d0204ee",
+    "instance_id": "b0b5bbd2",
     "spec_key": "remote_monitoring",
     "domain": "healthcare",
     "subtype": "Remote patient monitoring",
-    "timestamp": 1792274978.0873446,
+    "timestamp": 1792497482.9272327,
     "intent_text": "Continuous glucose monitor alert: blood sugar has been above 280 mg/dL for three consecutive readings.",
     "cpu_cores": 1.18,
     "cpu_freq_mhz": 1494,
@@ -450,11 +450,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "2ff20691",
+    "instance_id": "5a470408",
     "spec_key": "medical_imaging",
     "domain": "healthcare",
     "subtype": "Medical imaging diagnostics",
-    "timestamp": 1792274978.0883589,
+    "timestamp": 1792497482.9302156,
     "intent_text": "Fetal ultrasound 20-week anatomy scan, automated biometric measurements and anomaly screening.",
     "cpu_cores": 3.61,
     "cpu_freq_mhz": 3405,
@@ -480,11 +480,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "5cf213d8",
+    "instance_id": "56f29ecd",
     "spec_key": "remote_monitoring",
     "domain": "healthcare",
     "subtype": "Remote patient monitoring",
-    "timestamp": 1792274978.0873446,
+    "timestamp": 1792497482.9282322,
     "intent_text": "Continuous glucose monitor alert: blood sugar has been above 280 mg/dL for three consecutive readings.",
     "cpu_cores": 2.16,
     "cpu_freq_mhz": 1980,
@@ -510,11 +510,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "6b27e849",
+    "instance_id": "d0e8899e",
     "spec_key": "emergency_care",
     "domain": "healthcare",
     "subtype": "Emergency care",
-    "timestamp": 1792274978.0883589,
+    "timestamp": 1792497482.9292157,
     "intent_text": "Stroke alert: patient showing left-side facial droop and slurred speech, CT scan priority needed.",
     "cpu_cores": 1.6,
     "cpu_freq_mhz": 2041,
@@ -540,11 +540,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "0295c963",
+    "instance_id": "437882d3",
     "spec_key": "medical_imaging",
     "domain": "healthcare",
     "subtype": "Medical imaging diagnostics",
-    "timestamp": 1792274978.0873446,
+    "timestamp": 1792497482.9282322,
     "intent_text": "Skin lesion dermoscopy image, ABCDE criteria evaluation and melanoma probability score required.",
     "cpu_cores": 6.12,
     "cpu_freq_mhz": 3207,
@@ -570,11 +570,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "71aebe30",
+    "instance_id": "9e438d82",
     "spec_key": "medical_imaging",
     "domain": "healthcare",
     "subtype": "Medical imaging diagnostics",
-    "timestamp": 1792274978.0873446,
+    "timestamp": 1792497482.9282322,
     "intent_text": "Skin lesion dermoscopy image, ABCDE criteria evaluation and melanoma probability score required.",
     "cpu_cores": 4.4,
     "cpu_freq_mhz": 3756,
@@ -600,11 +600,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "455c32c0",
+    "instance_id": "14955b97",
     "spec_key": "remote_monitoring",
     "domain": "healthcare",
     "subtype": "Remote patient monitoring",
-    "timestamp": 1792274978.0868363,
+    "timestamp": 1792497482.9272327,
     "intent_text": "COPD patient peak flow meter reading 180 L/min, 40% of personal best, yellow zone protocol.",
     "cpu_cores": 1.46,
     "cpu_freq_mhz": 1130,
@@ -630,11 +630,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "039e027e",
+    "instance_id": "3fa9b987",
     "spec_key": "emergency_care",
     "domain": "healthcare",
     "subtype": "Emergency care",
-    "timestamp": 1792274978.0868363,
+    "timestamp": 1792497482.9262354,
     "intent_text": "Patient in cardiac arrest, automated defibrillator needs immediate rhythm analysis and shock advisory.",
     "cpu_cores": 3.42,
     "cpu_freq_mhz": 2821,
@@ -660,11 +660,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "c8e62735",
+    "instance_id": "c70ce189",
     "spec_key": "medical_imaging",
     "domain": "healthcare",
     "subtype": "Medical imaging diagnostics",
-    "timestamp": 1792274978.0883589,
+    "timestamp": 1792497482.9317236,
     "intent_text": "Retinal fundus image for diabetic retinopathy grading, patient has had diabetes for 12 years.",
     "cpu_cores": 7.77,
     "cpu_freq_mhz": 2484,
@@ -690,11 +690,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "11b16a88",
+    "instance_id": "958e8dd3",
     "spec_key": "remote_monitoring",
     "domain": "healthcare",
     "subtype": "Remote patient monitoring",
-    "timestamp": 1792274978.0873446,
+    "timestamp": 1792497482.9292157,
     "intent_text": "Parkinson's patient wearable showing increased tremor frequency overnight, medication timing review needed.",
     "cpu_cores": 2.48,
     "cpu_freq_mhz": 1299,
@@ -720,11 +720,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "dcf6034e",
+    "instance_id": "07778b15",
     "spec_key": "remote_monitoring",
     "domain": "healthcare",
     "subtype": "Remote patient monitoring",
-    "timestamp": 1792274978.0883589,
+    "timestamp": 1792497482.9292157,
     "intent_text": "COPD patient peak flow meter reading 180 L/min, 40% of personal best, yellow zone protocol.",
     "cpu_cores": 2.4,
     "cpu_freq_mhz": 1324,
@@ -750,11 +750,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "c9163b8f",
+    "instance_id": "72ed8a62",
     "spec_key": "medical_imaging",
     "domain": "healthcare",
     "subtype": "Medical imaging diagnostics",
-    "timestamp": 1792274978.0883589,
+    "timestamp": 1792497482.9302156,
     "intent_text": "Bone density DEXA scan, patient 68-year-old female, osteoporosis risk stratification needed.",
     "cpu_cores": 4.02,
     "cpu_freq_mhz": 4424,
@@ -780,11 +780,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "976ec7b5",
+    "instance_id": "a04c0c41",
     "spec_key": "emergency_care",
     "domain": "healthcare",
     "subtype": "Emergency care",
-    "timestamp": 1792274978.0873446,
+    "timestamp": 1792497482.9282322,
     "intent_text": "Trauma patient arriving in 2 minutes, blood type O-negative, allergic to penicillin \u2014 prep OR now.",
     "cpu_cores": 2.15,
     "cpu_freq_mhz": 2079,
@@ -810,11 +810,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "f6af7516",
+    "instance_id": "cb8a829a",
     "spec_key": "remote_monitoring",
     "domain": "healthcare",
     "subtype": "Remote patient monitoring",
-    "timestamp": 1792274978.0873446,
+    "timestamp": 1792497482.9282322,
     "intent_text": "Elderly patient fall detected by accelerometer, no response to voice prompt, emergency contact alert.",
     "cpu_cores": 3.65,
     "cpu_freq_mhz": 1632,
@@ -840,11 +840,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "c9225e3e",
+    "instance_id": "08ab6c8a",
     "spec_key": "medical_imaging",
     "domain": "healthcare",
     "subtype": "Medical imaging diagnostics",
-    "timestamp": 1792274978.0883589,
+    "timestamp": 1792497482.9292157,
     "intent_text": "Echocardiogram video 60fps, automated ejection fraction measurement and wall motion scoring required.",
     "cpu_cores": 3.79,
     "cpu_freq_mhz": 3997,
@@ -870,11 +870,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "c69586ea",
+    "instance_id": "46e0f50b",
     "spec_key": "medical_imaging",
     "domain": "healthcare",
     "subtype": "Medical imaging diagnostics",
-    "timestamp": 1792274978.0873446,
+    "timestamp": 1792497482.9272327,
     "intent_text": "Skin lesion dermoscopy image, ABCDE criteria evaluation and melanoma probability score required.",
     "cpu_cores": 5.97,
     "cpu_freq_mhz": 4393,
@@ -900,11 +900,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "890a06f5",
+    "instance_id": "0d204298",
     "spec_key": "remote_monitoring",
     "domain": "healthcare",
     "subtype": "Remote patient monitoring",
-    "timestamp": 1792274978.0883589,
+    "timestamp": 1792497482.9302156,
     "intent_text": "My smartwatch is showing irregular heartbeat for the past 20 minutes, heart rate jumping 110 to 160.",
     "cpu_cores": 3.55,
     "cpu_freq_mhz": 1803,
@@ -930,11 +930,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "69e98c0f",
+    "instance_id": "c41834ae",
     "spec_key": "remote_monitoring",
     "domain": "healthcare",
     "subtype": "Remote patient monitoring",
-    "timestamp": 1792274978.0883589,
+    "timestamp": 1792497482.9317236,
     "intent_text": "Hypertensive patient blood pressure 165/105 at home, took medication an hour ago, still elevated.",
     "cpu_cores": 3.36,
     "cpu_freq_mhz": 1205,
@@ -960,11 +960,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "c6b494d2",
+    "instance_id": "d043d869",
     "spec_key": "remote_monitoring",
     "domain": "healthcare",
     "subtype": "Remote patient monitoring",
-    "timestamp": 1792274978.0868363,
+    "timestamp": 1792497482.9262354,
     "intent_text": "Post-discharge heart failure patient weight increased 2.3 kg in 48 hours, ankle swelling reported.",
     "cpu_cores": 2.73,
     "cpu_freq_mhz": 942,
@@ -990,11 +990,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "feacf421",
+    "instance_id": "c7d365bc",
     "spec_key": "emergency_care",
     "domain": "healthcare",
     "subtype": "Emergency care",
-    "timestamp": 1792274978.0883589,
+    "timestamp": 1792497482.9302156,
     "intent_text": "Infant SpO2 dropped to 78%, ventilator settings require instant adjustment, nurse unresponsive.",
     "cpu_cores": 1.82,
     "cpu_freq_mhz": 2111,
@@ -1020,11 +1020,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "4c134bbf",
+    "instance_id": "3ce028ba",
     "spec_key": "emergency_care",
     "domain": "healthcare",
     "subtype": "Emergency care",
-    "timestamp": 1792274978.0883589,
+    "timestamp": 1792497482.9292157,
     "intent_text": "Multi-vehicle accident: three critical patients inbound, triage classification and resource allocation needed.",
     "cpu_cores": 2.17,
     "cpu_freq_mhz": 3576,
@@ -1050,11 +1050,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "f777f59d",
+    "instance_id": "9ebfade9",
     "spec_key": "medical_imaging",
     "domain": "healthcare",
     "subtype": "Medical imaging diagnostics",
-    "timestamp": 1792274978.0883589,
+    "timestamp": 1792497482.9302156,
     "intent_text": "Bone density DEXA scan, patient 68-year-old female, osteoporosis risk stratification needed.",
     "cpu_cores": 3.06,
     "cpu_freq_mhz": 3506,
@@ -1080,11 +1080,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "7e291825",
+    "instance_id": "52083f7a",
     "spec_key": "emergency_care",
     "domain": "healthcare",
     "subtype": "Emergency care",
-    "timestamp": 1792274978.0868363,
+    "timestamp": 1792497482.9272327,
     "intent_text": "Septic shock confirmed, lactate 6.2 mmol/L, initiate sepsis bundle protocol without delay.",
     "cpu_cores": 2.27,
     "cpu_freq_mhz": 2433,
@@ -1110,11 +1110,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "e0618d5d",
+    "instance_id": "03fe94bd",
     "spec_key": "remote_monitoring",
     "domain": "healthcare",
     "subtype": "Remote patient monitoring",
-    "timestamp": 1792274978.0868363,
+    "timestamp": 1792497482.9262354,
     "intent_text": "Diabetic patient missed insulin injection, CGM trending upward, ketone level requested remotely.",
     "cpu_cores": 2.19,
     "cpu_freq_mhz": 1739,
@@ -1140,11 +1140,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "4136d52c",
+    "instance_id": "073a738f",
     "spec_key": "medical_imaging",
     "domain": "healthcare",
     "subtype": "Medical imaging diagnostics",
-    "timestamp": 1792274978.0868363,
+    "timestamp": 1792497482.9262354,
     "intent_text": "Whole-slide pathology image 40x magnification, identify mitotic figures for cancer staging.",
     "cpu_cores": 7.83,
     "cpu_freq_mhz": 3131,
@@ -1170,11 +1170,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "124726c1",
+    "instance_id": "188bac89",
     "spec_key": "emergency_care",
     "domain": "healthcare",
     "subtype": "Emergency care",
-    "timestamp": 1792274978.0873446,
+    "timestamp": 1792497482.9282322,
     "intent_text": "Stroke alert: patient showing left-side facial droop and slurred speech, CT scan priority needed.",
     "cpu_cores": 3.06,
     "cpu_freq_mhz": 3746,
@@ -1200,11 +1200,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "54c834a3",
+    "instance_id": "e2ea0404",
     "spec_key": "remote_monitoring",
     "domain": "healthcare",
     "subtype": "Remote patient monitoring",
-    "timestamp": 1792274978.0873446,
+    "timestamp": 1792497482.9282322,
     "intent_text": "Post-discharge heart failure patient weight increased 2.3 kg in 48 hours, ankle swelling reported.",
     "cpu_cores": 2.39,
     "cpu_freq_mhz": 1705,
@@ -1230,11 +1230,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "805ec30c",
+    "instance_id": "8b9d2083",
     "spec_key": "remote_monitoring",
     "domain": "healthcare",
     "subtype": "Remote patient monitoring",
-    "timestamp": 1792274978.0868363,
+    "timestamp": 1792497482.9262354,
     "intent_text": "My smartwatch is showing irregular heartbeat for the past 20 minutes, heart rate jumping 110 to 160.",
     "cpu_cores": 1.28,
     "cpu_freq_mhz": 1276,
@@ -1260,11 +1260,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "113c5839",
+    "instance_id": "c68b4957",
     "spec_key": "emergency_care",
     "domain": "healthcare",
     "subtype": "Emergency care",
-    "timestamp": 1792274978.0868363,
+    "timestamp": 1792497482.9262354,
     "intent_text": "Stroke alert: patient showing left-side facial droop and slurred speech, CT scan priority needed.",
     "cpu_cores": 3.01,
     "cpu_freq_mhz": 3437,
@@ -1290,11 +1290,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "5a83fd4a",
+    "instance_id": "32b233c8",
     "spec_key": "emergency_care",
     "domain": "healthcare",
     "subtype": "Emergency care",
-    "timestamp": 1792274978.0883589,
+    "timestamp": 1792497482.9317236,
     "intent_text": "Premature neonate 28 weeks, oxygen saturation unstable, NICU incubator settings need emergency override.",
     "cpu_cores": 1.34,
     "cpu_freq_mhz": 2133,
@@ -1320,11 +1320,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "c4c03fce",
+    "instance_id": "8f48ecdb",
     "spec_key": "medical_imaging",
     "domain": "healthcare",
     "subtype": "Medical imaging diagnostics",
-    "timestamp": 1792274978.0883589,
+    "timestamp": 1792497482.9302156,
     "intent_text": "Whole-slide pathology image 40x magnification, identify mitotic figures for cancer staging.",
     "cpu_cores": 3.84,
     "cpu_freq_mhz": 3344,
@@ -1350,11 +1350,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "9f05e8ab",
+    "instance_id": "4de26ac9",
     "spec_key": "remote_monitoring",
     "domain": "healthcare",
     "subtype": "Remote patient monitoring",
-    "timestamp": 1792274978.0873446,
+    "timestamp": 1792497482.9282322,
     "intent_text": "Parkinson's patient wearable showing increased tremor frequency overnight, medication timing review needed.",
     "cpu_cores": 2.64,
     "cpu_freq_mhz": 800,
@@ -1380,11 +1380,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "6468f5f4",
+    "instance_id": "e132ebc4",
     "spec_key": "remote_monitoring",
     "domain": "healthcare",
     "subtype": "Remote patient monitoring",
-    "timestamp": 1792274978.0868363,
+    "timestamp": 1792497482.9272327,
     "intent_text": "Continuous glucose monitor alert: blood sugar has been above 280 mg/dL for three consecutive readings.",
     "cpu_cores": 3.2,
     "cpu_freq_mhz": 941,
@@ -1410,11 +1410,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "b0f2db44",
+    "instance_id": "e113ea4d",
     "spec_key": "remote_monitoring",
     "domain": "healthcare",
     "subtype": "Remote patient monitoring",
-    "timestamp": 1792274978.0868363,
+    "timestamp": 1792497482.9262354,
     "intent_text": "Home oxygen concentrator patient SpO2 reading 91%, lower than usual, feeling slightly breathless.",
     "cpu_cores": 2.39,
     "cpu_freq_mhz": 1352,
@@ -1440,11 +1440,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "78eee4ce",
+    "instance_id": "71bdbca5",
     "spec_key": "remote_monitoring",
     "domain": "healthcare",
     "subtype": "Remote patient monitoring",
-    "timestamp": 1792274978.0883589,
+    "timestamp": 1792497482.9317236,
     "intent_text": "Hypertensive patient blood pressure 165/105 at home, took medication an hour ago, still elevated.",
     "cpu_cores": 2.71,
     "cpu_freq_mhz": 923,
@@ -1470,11 +1470,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "21f70795",
+    "instance_id": "4a08f7cd",
     "spec_key": "emergency_care",
     "domain": "healthcare",
     "subtype": "Emergency care",
-    "timestamp": 1792274978.0868363,
+    "timestamp": 1792497482.9272327,
     "intent_text": "Severe anaphylaxis reaction, patient weight 72kg, epinephrine dose and airway management required now.",
     "cpu_cores": 3.64,
     "cpu_freq_mhz": 3703,
@@ -1500,11 +1500,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "4b63d99a",
+    "instance_id": "54e39d8c",
     "spec_key": "medical_imaging",
     "domain": "healthcare",
     "subtype": "Medical imaging diagnostics",
-    "timestamp": 1792274978.0883589,
+    "timestamp": 1792497482.9302156,
     "intent_text": "Echocardiogram video 60fps, automated ejection fraction measurement and wall motion scoring required.",
     "cpu_cores": 3.68,
     "cpu_freq_mhz": 3531,
@@ -1530,11 +1530,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "5606e4bb",
+    "instance_id": "fe073d43",
     "spec_key": "medical_imaging",
     "domain": "healthcare",
     "subtype": "Medical imaging diagnostics",
-    "timestamp": 1792274978.0873446,
+    "timestamp": 1792497482.9292157,
     "intent_text": "Whole-slide pathology image 40x magnification, identify mitotic figures for cancer staging.",
     "cpu_cores": 6.59,
     "cpu_freq_mhz": 4384,
@@ -1560,11 +1560,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "b8e383d9",
+    "instance_id": "33be1765",
     "spec_key": "remote_monitoring",
     "domain": "healthcare",
     "subtype": "Remote patient monitoring",
-    "timestamp": 1792274978.0883589,
+    "timestamp": 1792497482.9317236,
     "intent_text": "COPD patient peak flow meter reading 180 L/min, 40% of personal best, yellow zone protocol.",
     "cpu_cores": 1.52,
     "cpu_freq_mhz": 953,
@@ -1590,11 +1590,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "4807c225",
+    "instance_id": "40f50dc3",
     "spec_key": "medical_imaging",
     "domain": "healthcare",
     "subtype": "Medical imaging diagnostics",
-    "timestamp": 1792274978.0873446,
+    "timestamp": 1792497482.9272327,
     "intent_text": "Bone density DEXA scan, patient 68-year-old female, osteoporosis risk stratification needed.",
     "cpu_cores": 7.41,
     "cpu_freq_mhz": 3074,
@@ -1620,11 +1620,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "fd8a88ca",
+    "instance_id": "a93db464",
     "spec_key": "medical_imaging",
     "domain": "healthcare",
     "subtype": "Medical imaging diagnostics",
-    "timestamp": 1792274978.0883589,
+    "timestamp": 1792497482.9292157,
     "intent_text": "Echocardiogram video 60fps, automated ejection fraction measurement and wall motion scoring required.",
     "cpu_cores": 4.03,
     "cpu_freq_mhz": 3952,
@@ -1650,11 +1650,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "04a422df",
+    "instance_id": "c7787087",
     "spec_key": "remote_monitoring",
     "domain": "healthcare",
     "subtype": "Remote patient monitoring",
-    "timestamp": 1792274978.0873446,
+    "timestamp": 1792497482.9272327,
     "intent_text": "Elderly patient fall detected by accelerometer, no response to voice prompt, emergency contact alert.",
     "cpu_cores": 1.47,
     "cpu_freq_mhz": 1840,
@@ -1680,11 +1680,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "21078e57",
+    "instance_id": "f967e2c4",
     "spec_key": "remote_monitoring",
     "domain": "healthcare",
     "subtype": "Remote patient monitoring",
-    "timestamp": 1792274978.0873446,
+    "timestamp": 1792497482.9282322,
     "intent_text": "Hypertensive patient blood pressure 165/105 at home, took medication an hour ago, still elevated.",
     "cpu_cores": 1.11,
     "cpu_freq_mhz": 1689,
@@ -1710,11 +1710,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "5e71f62c",
+    "instance_id": "7fb457e5",
     "spec_key": "emergency_care",
     "domain": "healthcare",
     "subtype": "Emergency care",
-    "timestamp": 1792274978.0873446,
+    "timestamp": 1792497482.9282322,
     "intent_text": "Multi-vehicle accident: three critical patients inbound, triage classification and resource allocation needed.",
     "cpu_cores": 3.49,
     "cpu_freq_mhz": 2090,
@@ -1740,11 +1740,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "e0685523",
+    "instance_id": "5ba62f6c",
     "spec_key": "remote_monitoring",
     "domain": "healthcare",
     "subtype": "Remote patient monitoring",
-    "timestamp": 1792274978.0883589,
+    "timestamp": 1792497482.9317236,
     "intent_text": "Sleep apnoea patient CPAP compliance data: 4 apnoea events per hour last night, mask leak detected.",
     "cpu_cores": 2.79,
     "cpu_freq_mhz": 1262,
@@ -1770,11 +1770,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "ef73dedc",
+    "instance_id": "7da84b45",
     "spec_key": "remote_monitoring",
     "domain": "healthcare",
     "subtype": "Remote patient monitoring",
-    "timestamp": 1792274978.0873446,
+    "timestamp": 1792497482.9272327,
     "intent_text": "Sleep apnoea patient CPAP compliance data: 4 apnoea events per hour last night, mask leak detected.",
     "cpu_cores": 2.7,
     "cpu_freq_mhz": 1447,
@@ -1800,11 +1800,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "05ef7cc2",
+    "instance_id": "882fd9a4",
     "spec_key": "remote_monitoring",
     "domain": "healthcare",
     "subtype": "Remote patient monitoring",
-    "timestamp": 1792274978.0868363,
+    "timestamp": 1792497482.9262354,
     "intent_text": "My smartwatch is showing irregular heartbeat for the past 20 minutes, heart rate jumping 110 to 160.",
     "cpu_cores": 3.58,
     "cpu_freq_mhz": 1113,
@@ -1830,11 +1830,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "fb3172fc",
+    "instance_id": "514490c9",
     "spec_key": "medical_imaging",
     "domain": "healthcare",
     "subtype": "Medical imaging diagnostics",
-    "timestamp": 1792274978.0868363,
+    "timestamp": 1792497482.9262354,
     "intent_text": "Echocardiogram video 60fps, automated ejection fraction measurement and wall motion scoring required.",
     "cpu_cores": 2.61,
     "cpu_freq_mhz": 3956,
@@ -1860,11 +1860,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "de9efc54",
+    "instance_id": "31d804c5",
     "spec_key": "remote_monitoring",
     "domain": "healthcare",
     "subtype": "Remote patient monitoring",
-    "timestamp": 1792274978.0873446,
+    "timestamp": 1792497482.9272327,
     "intent_text": "Parkinson's patient wearable showing increased tremor frequency overnight, medication timing review needed.",
     "cpu_cores": 1.55,
     "cpu_freq_mhz": 1747,
@@ -1890,11 +1890,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "d1358f6a",
+    "instance_id": "aca0d290",
     "spec_key": "emergency_care",
     "domain": "healthcare",
     "subtype": "Emergency care",
-    "timestamp": 1792274978.0873446,
+    "timestamp": 1792497482.9292157,
     "intent_text": "Premature neonate 28 weeks, oxygen saturation unstable, NICU incubator settings need emergency override.",
     "cpu_cores": 3.0,
     "cpu_freq_mhz": 3144,
@@ -1920,11 +1920,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "90c884d8",
+    "instance_id": "2cc002c8",
     "spec_key": "remote_monitoring",
     "domain": "healthcare",
     "subtype": "Remote patient monitoring",
-    "timestamp": 1792274978.0868363,
+    "timestamp": 1792497482.9252324,
     "intent_text": "Hypertensive patient blood pressure 165/105 at home, took medication an hour ago, still elevated.",
     "cpu_cores": 1.73,
     "cpu_freq_mhz": 1085,
@@ -1950,11 +1950,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "db68bb25",
+    "instance_id": "695d6282",
     "spec_key": "remote_monitoring",
     "domain": "healthcare",
     "subtype": "Remote patient monitoring",
-    "timestamp": 1792274978.0883589,
+    "timestamp": 1792497482.9317236,
     "intent_text": "Home oxygen concentrator patient SpO2 reading 91%, lower than usual, feeling slightly breathless.",
     "cpu_cores": 1.45,
     "cpu_freq_mhz": 1952,
@@ -1980,11 +1980,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "3b2c7135",
+    "instance_id": "af239da2",
     "spec_key": "remote_monitoring",
     "domain": "healthcare",
     "subtype": "Remote patient monitoring",
-    "timestamp": 1792274978.0868363,
+    "timestamp": 1792497482.9262354,
     "intent_text": "Elderly patient fall detected by accelerometer, no response to voice prompt, emergency contact alert.",
     "cpu_cores": 3.25,
     "cpu_freq_mhz": 1496,
@@ -2010,11 +2010,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "ae334137",
+    "instance_id": "2bf21079",
     "spec_key": "medical_imaging",
     "domain": "healthcare",
     "subtype": "Medical imaging diagnostics",
-    "timestamp": 1792274978.0883589,
+    "timestamp": 1792497482.9317236,
     "intent_text": "Chest CT scan uploaded, 512 DICOM slices, AI needs to flag pulmonary nodules above 6mm.",
     "cpu_cores": 5.44,
     "cpu_freq_mhz": 4322,
@@ -2040,11 +2040,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "e551bc33",
+    "instance_id": "1d4da88a",
     "spec_key": "emergency_care",
     "domain": "healthcare",
     "subtype": "Emergency care",
-    "timestamp": 1792274978.0873446,
+    "timestamp": 1792497482.9272327,
     "intent_text": "Stroke alert: patient showing left-side facial droop and slurred speech, CT scan priority needed.",
     "cpu_cores": 2.21,
     "cpu_freq_mhz": 3166,
@@ -2070,11 +2070,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "db695b2e",
+    "instance_id": "4d1cb0eb",
     "spec_key": "remote_monitoring",
     "domain": "healthcare",
     "subtype": "Remote patient monitoring",
-    "timestamp": 1792274978.0873446,
+    "timestamp": 1792497482.9282322,
     "intent_text": "Home oxygen concentrator patient SpO2 reading 91%, lower than usual, feeling slightly breathless.",
     "cpu_cores": 3.22,
     "cpu_freq_mhz": 1929,
@@ -2100,11 +2100,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "d63de86b",
+    "instance_id": "67374de9",
     "spec_key": "remote_monitoring",
     "domain": "healthcare",
     "subtype": "Remote patient monitoring",
-    "timestamp": 1792274978.0883589,
+    "timestamp": 1792497482.9302156,
     "intent_text": "Continuous glucose monitor alert: blood sugar has been above 280 mg/dL for three consecutive readings.",
     "cpu_cores": 3.5,
     "cpu_freq_mhz": 1406,
@@ -2130,11 +2130,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "ab7d1039",
+    "instance_id": "224bf060",
     "spec_key": "emergency_care",
     "domain": "healthcare",
     "subtype": "Emergency care",
-    "timestamp": 1792274978.0873446,
+    "timestamp": 1792497482.9292157,
     "intent_text": "Stroke alert: patient showing left-side facial droop and slurred speech, CT scan priority needed.",
     "cpu_cores": 1.53,
     "cpu_freq_mhz": 3425,
@@ -2160,11 +2160,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "27766741",
+    "instance_id": "6f3c1e8c",
     "spec_key": "emergency_care",
     "domain": "healthcare",
     "subtype": "Emergency care",
-    "timestamp": 1792274978.0868363,
+    "timestamp": 1792497482.9262354,
     "intent_text": "Post-surgical haemorrhage detected, patient losing 200mL per minute, surgical team emergency page required.",
     "cpu_cores": 1.37,
     "cpu_freq_mhz": 2775,
@@ -2190,11 +2190,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "40308c42",
+    "instance_id": "3edcc38a",
     "spec_key": "emergency_care",
     "domain": "healthcare",
     "subtype": "Emergency care",
-    "timestamp": 1792274978.0883589,
+    "timestamp": 1792497482.9292157,
     "intent_text": "Post-surgical haemorrhage detected, patient losing 200mL per minute, surgical team emergency page required.",
     "cpu_cores": 1.16,
     "cpu_freq_mhz": 2716,
@@ -2220,11 +2220,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "382629d1",
+    "instance_id": "91d639e9",
     "spec_key": "remote_monitoring",
     "domain": "healthcare",
     "subtype": "Remote patient monitoring",
-    "timestamp": 1792274978.0873446,
+    "timestamp": 1792497482.9282322,
     "intent_text": "Continuous glucose monitor alert: blood sugar has been above 280 mg/dL for three consecutive readings.",
     "cpu_cores": 3.16,
     "cpu_freq_mhz": 1415,
@@ -2250,11 +2250,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "9babedb9",
+    "instance_id": "45cfdec2",
     "spec_key": "emergency_care",
     "domain": "healthcare",
     "subtype": "Emergency care",
-    "timestamp": 1792274978.0873446,
+    "timestamp": 1792497482.9282322,
     "intent_text": "Post-surgical haemorrhage detected, patient losing 200mL per minute, surgical team emergency page required.",
     "cpu_cores": 3.11,
     "cpu_freq_mhz": 3252,
@@ -2280,11 +2280,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "ae95ce35",
+    "instance_id": "0257145e",
     "spec_key": "medical_imaging",
     "domain": "healthcare",
     "subtype": "Medical imaging diagnostics",
-    "timestamp": 1792274978.0883589,
+    "timestamp": 1792497482.9292157,
     "intent_text": "Retinal fundus image for diabetic retinopathy grading, patient has had diabetes for 12 years.",
     "cpu_cores": 2.39,
     "cpu_freq_mhz": 4069,
@@ -2310,11 +2310,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "18e0266d",
+    "instance_id": "a534db4a",
     "spec_key": "remote_monitoring",
     "domain": "healthcare",
     "subtype": "Remote patient monitoring",
-    "timestamp": 1792274978.0883589,
+    "timestamp": 1792497482.9317236,
     "intent_text": "Hypertensive patient blood pressure 165/105 at home, took medication an hour ago, still elevated.",
     "cpu_cores": 1.1,
     "cpu_freq_mhz": 1390,
@@ -2340,11 +2340,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "6e3d197d",
+    "instance_id": "1a2cfc8b",
     "spec_key": "remote_monitoring",
     "domain": "healthcare",
     "subtype": "Remote patient monitoring",
-    "timestamp": 1792274978.0883589,
+    "timestamp": 1792497482.9302156,
     "intent_text": "My smartwatch is showing irregular heartbeat for the past 20 minutes, heart rate jumping 110 to 160.",
     "cpu_cores": 1.28,
     "cpu_freq_mhz": 1253,
@@ -2370,11 +2370,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "5b85d9c1",
+    "instance_id": "29d37855",
     "spec_key": "remote_monitoring",
     "domain": "healthcare",
     "subtype": "Remote patient monitoring",
-    "timestamp": 1792274978.0873446,
+    "timestamp": 1792497482.9272327,
     "intent_text": "Diabetic patient missed insulin injection, CGM trending upward, ketone level requested remotely.",
     "cpu_cores": 3.7,
     "cpu_freq_mhz": 1724,
@@ -2400,11 +2400,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "f2481115",
+    "instance_id": "a27e7d66",
     "spec_key": "emergency_care",
     "domain": "healthcare",
     "subtype": "Emergency care",
-    "timestamp": 1792274978.0868363,
+    "timestamp": 1792497482.9262354,
     "intent_text": "Septic shock confirmed, lactate 6.2 mmol/L, initiate sepsis bundle protocol without delay.",
     "cpu_cores": 3.99,
     "cpu_freq_mhz": 3083,
@@ -2430,11 +2430,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "fbc7693a",
+    "instance_id": "c6cc74d8",
     "spec_key": "emergency_care",
     "domain": "healthcare",
     "subtype": "Emergency care",
-    "timestamp": 1792274978.0873446,
+    "timestamp": 1792497482.9282322,
     "intent_text": "Infant SpO2 dropped to 78%, ventilator settings require instant adjustment, nurse unresponsive.",
     "cpu_cores": 2.64,
     "cpu_freq_mhz": 3709,
@@ -2460,11 +2460,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "9beff604",
+    "instance_id": "0ffb8b32",
     "spec_key": "medical_imaging",
     "domain": "healthcare",
     "subtype": "Medical imaging diagnostics",
-    "timestamp": 1792274978.0873446,
+    "timestamp": 1792497482.9282322,
     "intent_text": "Whole-slide pathology image 40x magnification, identify mitotic figures for cancer staging.",
     "cpu_cores": 4.19,
     "cpu_freq_mhz": 2563,
@@ -2490,11 +2490,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "7a1a9c35",
+    "instance_id": "c369fecd",
     "spec_key": "medical_imaging",
     "domain": "healthcare",
     "subtype": "Medical imaging diagnostics",
-    "timestamp": 1792274978.0873446,
+    "timestamp": 1792497482.9282322,
     "intent_text": "Skin lesion dermoscopy image, ABCDE criteria evaluation and melanoma probability score required.",
     "cpu_cores": 2.76,
     "cpu_freq_mhz": 4122,
@@ -2520,11 +2520,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "3efdc6d9",
+    "instance_id": "8d7568b3",
     "spec_key": "emergency_care",
     "domain": "healthcare",
     "subtype": "Emergency care",
-    "timestamp": 1792274978.0873446,
+    "timestamp": 1792497482.9282322,
     "intent_text": "Patient in cardiac arrest, automated defibrillator needs immediate rhythm analysis and shock advisory.",
     "cpu_cores": 1.54,
     "cpu_freq_mhz": 2680,
@@ -2550,11 +2550,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "d0149a10",
+    "instance_id": "a8bf3884",
     "spec_key": "remote_monitoring",
     "domain": "healthcare",
     "subtype": "Remote patient monitoring",
-    "timestamp": 1792274978.0883589,
+    "timestamp": 1792497482.9317236,
     "intent_text": "Diabetic patient missed insulin injection, CGM trending upward, ketone level requested remotely.",
     "cpu_cores": 1.24,
     "cpu_freq_mhz": 881,
@@ -2580,11 +2580,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "b0b6d3f2",
+    "instance_id": "bd8a27eb",
     "spec_key": "remote_monitoring",
     "domain": "healthcare",
     "subtype": "Remote patient monitoring",
-    "timestamp": 1792274978.0868363,
+    "timestamp": 1792497482.9262354,
     "intent_text": "Hypertensive patient blood pressure 165/105 at home, took medication an hour ago, still elevated.",
     "cpu_cores": 3.24,
     "cpu_freq_mhz": 1677,
@@ -2610,11 +2610,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "4d696a5d",
+    "instance_id": "aa75a23c",
     "spec_key": "emergency_care",
     "domain": "healthcare",
     "subtype": "Emergency care",
-    "timestamp": 1792274978.0873446,
+    "timestamp": 1792497482.9292157,
     "intent_text": "Stroke alert: patient showing left-side facial droop and slurred speech, CT scan priority needed.",
     "cpu_cores": 1.82,
     "cpu_freq_mhz": 2654,
@@ -2640,11 +2640,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "2798af86",
+    "instance_id": "5b4fb726",
     "spec_key": "emergency_care",
     "domain": "healthcare",
     "subtype": "Emergency care",
-    "timestamp": 1792274978.0883589,
+    "timestamp": 1792497482.9302156,
     "intent_text": "Multi-vehicle accident: three critical patients inbound, triage classification and resource allocation needed.",
     "cpu_cores": 2.47,
     "cpu_freq_mhz": 3552,
@@ -2670,11 +2670,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "f8b74370",
+    "instance_id": "df51180c",
     "spec_key": "remote_monitoring",
     "domain": "healthcare",
     "subtype": "Remote patient monitoring",
-    "timestamp": 1792274978.0873446,
+    "timestamp": 1792497482.9292157,
     "intent_text": "Continuous glucose monitor alert: blood sugar has been above 280 mg/dL for three consecutive readings.",
     "cpu_cores": 1.85,
     "cpu_freq_mhz": 1486,
@@ -2700,11 +2700,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "3ae5777e",
+    "instance_id": "433e160c",
     "spec_key": "emergency_care",
     "domain": "healthcare",
     "subtype": "Emergency care",
-    "timestamp": 1792274978.0883589,
+    "timestamp": 1792497482.9302156,
     "intent_text": "Stroke alert: patient showing left-side facial droop and slurred speech, CT scan priority needed.",
     "cpu_cores": 1.31,
     "cpu_freq_mhz": 3582,
@@ -2730,11 +2730,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "ae8092bc",
+    "instance_id": "4a9449f9",
     "spec_key": "emergency_care",
     "domain": "healthcare",
     "subtype": "Emergency care",
-    "timestamp": 1792274978.0873446,
+    "timestamp": 1792497482.9272327,
     "intent_text": "Septic shock confirmed, lactate 6.2 mmol/L, initiate sepsis bundle protocol without delay.",
     "cpu_cores": 2.73,
     "cpu_freq_mhz": 2497,
@@ -2760,11 +2760,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "c7a217d7",
+    "instance_id": "fecedd72",
     "spec_key": "emergency_care",
     "domain": "healthcare",
     "subtype": "Emergency care",
-    "timestamp": 1792274978.0873446,
+    "timestamp": 1792497482.9272327,
     "intent_text": "Post-surgical haemorrhage detected, patient losing 200mL per minute, surgical team emergency page required.",
     "cpu_cores": 1.8,
     "cpu_freq_mhz": 2714,
@@ -2790,11 +2790,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "c0d43421",
+    "instance_id": "655c4386",
     "spec_key": "emergency_care",
     "domain": "healthcare",
     "subtype": "Emergency care",
-    "timestamp": 1792274978.0873446,
+    "timestamp": 1792497482.9292157,
     "intent_text": "Patient in cardiac arrest, automated defibrillator needs immediate rhythm analysis and shock advisory.",
     "cpu_cores": 1.73,
     "cpu_freq_mhz": 2973,
@@ -2820,11 +2820,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "7763f014",
+    "instance_id": "48cd5e58",
     "spec_key": "remote_monitoring",
     "domain": "healthcare",
     "subtype": "Remote patient monitoring",
-    "timestamp": 1792274978.0883589,
+    "timestamp": 1792497482.9302156,
     "intent_text": "Diabetic patient missed insulin injection, CGM trending upward, ketone level requested remotely.",
     "cpu_cores": 2.66,
     "cpu_freq_mhz": 1504,
@@ -2850,11 +2850,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "d23bbe87",
+    "instance_id": "b5b4d7d6",
     "spec_key": "medical_imaging",
     "domain": "healthcare",
     "subtype": "Medical imaging diagnostics",
-    "timestamp": 1792274978.0883589,
+    "timestamp": 1792497482.9292157,
     "intent_text": "Bone density DEXA scan, patient 68-year-old female, osteoporosis risk stratification needed.",
     "cpu_cores": 4.91,
     "cpu_freq_mhz": 3992,
@@ -2880,11 +2880,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "5505e749",
+    "instance_id": "d1e8d0dc",
     "spec_key": "remote_monitoring",
     "domain": "healthcare",
     "subtype": "Remote patient monitoring",
-    "timestamp": 1792274978.0873446,
+    "timestamp": 1792497482.9292157,
     "intent_text": "Parkinson's patient wearable showing increased tremor frequency overnight, medication timing review needed.",
     "cpu_cores": 3.49,
     "cpu_freq_mhz": 1922,
@@ -2910,11 +2910,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "1626470e",
+    "instance_id": "c099f858",
     "spec_key": "emergency_care",
     "domain": "healthcare",
     "subtype": "Emergency care",
-    "timestamp": 1792274978.0873446,
+    "timestamp": 1792497482.9272327,
     "intent_text": "Patient in cardiac arrest, automated defibrillator needs immediate rhythm analysis and shock advisory.",
     "cpu_cores": 3.58,
     "cpu_freq_mhz": 2145,
@@ -2940,11 +2940,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "a3421207",
+    "instance_id": "24c9aea7",
     "spec_key": "remote_monitoring",
     "domain": "healthcare",
     "subtype": "Remote patient monitoring",
-    "timestamp": 1792274978.0883589,
+    "timestamp": 1792497482.9317236,
     "intent_text": "Hypertensive patient blood pressure 165/105 at home, took medication an hour ago, still elevated.",
     "cpu_cores": 3.48,
     "cpu_freq_mhz": 946,
@@ -2970,11 +2970,11 @@
     "llm_inference_ms": null
   },
   {
-    "instance_id": "f7ee903b",
+    "instance_id": "7014517e",
     "spec_key": "remote_monitoring",
     "domain": "healthcare",
     "subtype": "Remote patient monitoring",
-    "timestamp": 1792274978.0883589,
+    "timestamp": 1792497482.9317236,
     "intent_text": "Hypertensive patient blood pressure 165/105 at home, took medication an hour ago, still elevated.",
     "cpu_cores": 2.32,
     "cpu_freq_mhz": 1759,

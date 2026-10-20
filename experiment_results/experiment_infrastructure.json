@@ -1,7 +1,7 @@
 {
   "cloud": [
     {
-      "node_id": "C01-195B",
+      "node_id": "C01-137D",
       "tier": "cloud",
       "hw_class": "datacenter_x86",
       "status": "idle",
@@ -18,7 +18,7 @@
   ],
   "fog": [
     {
-      "node_id": "F01-6FB7",
+      "node_id": "F01-3A1B",
       "tier": "fog",
       "hw_class": "edge_server_x86",
       "status": "idle",
@@ -33,7 +33,7 @@
       "latency_to_next_ms": 25.22
     },
     {
-      "node_id": "F02-5817",
+      "node_id": "F02-2CFC",
       "tier": "fog",
       "hw_class": "edge_server_x86",
       "status": "idle",
@@ -48,7 +48,7 @@
       "latency_to_next_ms": 21.08
     },
     {
-      "node_id": "F03-480B",
+      "node_id": "F03-FE43",
       "tier": "fog",
       "hw_class": "edge_server_x86",
       "status": "idle",
@@ -63,7 +63,7 @@
       "latency_to_next_ms": 49.78
     },
     {
-      "node_id": "F04-0B8D",
+      "node_id": "F04-B42B",
       "tier": "fog",
       "hw_class": "edge_server_x86",
       "status": "idle",
@@ -78,7 +78,7 @@
       "latency_to_next_ms": 44.56
     },
     {
-      "node_id": "F05-3154",
+      "node_id": "F05-F2FA",
       "tier": "fog",
       "hw_class": "edge_server_x86",
       "status": "idle",
@@ -93,7 +93,7 @@
       "latency_to_next_ms": 29.93
     },
     {
-      "node_id": "F06-E865",
+      "node_id": "F06-2B88",
       "tier": "fog",
       "hw_class": "edge_server_x86",
       "status": "idle",
@@ -108,7 +108,7 @@
       "latency_to_next_ms": 33.68
     },
     {
-      "node_id": "F07-2579",
+      "node_id": "F07-CCBD",
       "tier": "fog",
       "hw_class": "edge_server_x86",
       "status": "idle",
@@ -123,7 +123,7 @@
       "latency_to_next_ms": 46.26
     },
     {
-      "node_id": "F08-D93B",
+      "node_id": "F08-2849",
       "tier": "fog",
       "hw_class": "edge_server_x86",
       "status": "idle",
@@ -140,7 +140,7 @@
   ],
   "edge": [
     {
-      "node_id": "E01-70F8",
+      "node_id": "E01-1DC0",
       "tier": "edge",
       "hw_class": "mini_pc_x86",
       "status": "idle",
@@ -155,7 +155,7 @@
       "latency_to_next_ms": 4.38
     },
     {
-      "node_id": "E02-A3BB",
+      "node_id": "E02-A82D",
       "tier": "edge",
       "hw_class": "mini_pc_x86",
       "status": "idle",
@@ -170,7 +170,7 @@
       "latency_to_next_ms": 10.89
     },
     {
-      "node_id": "E03-04E0",
+      "node_id": "E03-01E6",
       "tier": "edge",
       "hw_class": "mini_pc_x86",
       "status": "idle",
@@ -185,7 +185,7 @@
       "latency_to_next_ms": 9.78
     },
     {
-      "node_id": "E04-4505",
+      "node_id": "E04-13CD",
       "tier": "edge",
       "hw_class": "mini_pc_x86",
       "status": "idle",
@@ -200,7 +200,7 @@
       "latency_to_next_ms": 10.1
     },
     {
-      "node_id": "E05-24D9",
+      "node_id": "E05-CD6E",
       "tier": "edge",
       "hw_class": "mini_pc_x86",
       "status": "idle",
@@ -215,7 +215,7 @@
       "latency_to_next_ms": 10.65
     },
     {
-      "node_id": "E06-64C7",
+      "node_id": "E06-C1EA",
       "tier": "edge",
       "hw_class": "mini_pc_x86",
       "status": "idle",
@@ -230,7 +230,7 @@
       "latency_to_next_ms": 9.28
     },
     {
-      "node_id": "E07-7581",
+      "node_id": "E07-4C7B",
       "tier": "edge",
       "hw_class": "mini_pc_x86",
       "status": "idle",
@@ -245,7 +245,7 @@
       "latency_to_next_ms": 6.49
     },
     {
-      "node_id": "E08-BCE8",
+      "node_id": "E08-30F5",
       "tier": "edge",
       "hw_class": "mini_pc_x86",
       "status": "idle",
@@ -260,7 +260,7 @@
       "latency_to_next_ms": 5.84
     },
     {
-      "node_id": "E09-F43A",
+      "node_id": "E09-CFEE",
       "tier": "edge",
       "hw_class": "mini_pc_x86",
       "status": "idle",
@@ -275,7 +275,7 @@
       "latency_to_next_ms": 9.35
     },
     {
-      "node_id": "E10-579E",
+      "node_id": "E10-0857",
       "tier": "edge",
       "hw_class": "mini_pc_x86",
       "status": "idle",
@@ -292,7 +292,7 @@
   ],
   "local": [
     {
-      "node_id": "L01-35C0",
+      "node_id": "L01-9CCB",
       "tier": "local",
       "hw_class": "raspberry_pi_5",
       "status": "idle",
@@ -307,7 +307,7 @@
       "latency_to_next_ms": 2.85
     },
     {
-      "node_id": "L02-3A00",
+      "node_id": "L02-76F2",
       "tier": "local",
       "hw_class": "raspberry_pi_5",
       "status": "idle",
@@ -322,7 +322,7 @@
       "latency_to_next_ms": 4.01
     },
     {
-      "node_id": "L03-8D74",
+      "node_id": "L03-82DB",
       "tier": "local",
       "hw_class": "raspberry_pi_5",
       "status": "idle",
@@ -337,7 +337,7 @@
       "latency_to_next_ms": 1.99
     },
     {
-      "node_id": "L04-FD1B",
+      "node_id": "L04-DE83",
       "tier": "local",
       "hw_class": "raspberry_pi_5",
       "status": "idle",
@@ -352,7 +352,7 @@
       "latency_to_next_ms": 4.41
     },
     {
-      "node_id": "L05-C87A",
+      "node_id": "L05-C3A4",
       "tier": "local",
       "hw_class": "raspberry_pi_5",
       "status": "idle",
@@ -367,7 +367,7 @@
       "latency_to_next_ms": 1.67
     },
     {
-      "node_id": "L06-1032",
+      "node_id": "L06-0C55",
       "tier": "local",
       "hw_class": "raspberry_pi_5",
       "status": "idle",
@@ -382,7 +382,7 @@
       "latency_to_next_ms": 3.36
     },
     {
-      "node_id": "L07-2F14",
+      "node_id": "L07-C5EC",
       "tier": "local",
       "hw_class": "raspberry_pi_5",
       "status": "idle",
@@ -397,7 +397,7 @@
       "latency_to_next_ms": 3.44
     },
     {
-      "node_id": "L08-B59A",
+      "node_id": "L08-38C1",
       "tier": "local",
       "hw_class": "raspberry_pi_5",
       "status": "idle",
