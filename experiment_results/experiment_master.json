@@ -1,9 +1,11 @@
 {
   "experiment": {
-    "timestamp": "2026-10-20T14:58:05.167893",
-    "num_apps": 100,
+    "timestamp": "2026-10-25T16:55:15.538393",
+    "num_apps": 1000,
     "domains": [
-      "healthcare"
+      "healthcare",
+      "industrial",
+      "general"
     ],
     "active_tiers": [
       "cloud",
@@ -11,22 +13,29 @@
       "edge",
       "local"
     ],
-    "num_fog_nodes": 8,
-    "num_edge_nodes": 10,
-    "num_local_nodes": 8,
-    "llm_backend": "llama_cpp",
+    "num_fog_nodes": 25,
+    "num_edge_nodes": 25,
+    "num_local_nodes": 25,
+    "llm_backend": "mock",
     "seed": 42,
     "requirement_mode": "random",
-    "total_elapsed_s": 2.24
+    "total_elapsed_s": 12.62
   },
   "app_summary": {
-    "total": 100,
+    "total": 1000,
     "domains": [
-      "healthcare"
+      "healthcare",
+      "industrial",
+      "general"
     ],
     "subtypes": [
-      "Medical imaging diagnostics",
+      "Autonomous process control",
+      "Predictive maintenance",
+      "Quality control vision",
       "Emergency care",
+      "Cognitive digital twin",
+      "Federated learning coordination",
+      "Smart environment monitoring",
       "Remote patient monitoring"
     ]
   },
@@ -43,33 +52,33 @@
       ]
     },
     "fog": {
-      "node_count": 8,
-      "total_cpu_cores": 134.01,
-      "total_ram_gb": 519.8,
-      "total_gpu_vram_gb": 196.2,
-      "total_storage_tb": 16.73,
-      "avg_latency_to_next_ms": 35.51,
+      "node_count": 25,
+      "total_cpu_cores": 2574.84,
+      "total_ram_gb": 3695.2,
+      "total_gpu_vram_gb": 2362.8,
+      "total_storage_tb": 216.79,
+      "avg_latency_to_next_ms": 38.08,
       "llm_models": [
         "llama3.2:8b-instruct-q4_K_M"
       ]
     },
     "edge": {
-      "node_count": 10,
-      "total_cpu_cores": 113.06,
-      "total_ram_gb": 358.8,
-      "total_gpu_vram_gb": 0.0,
-      "total_storage_tb": 5.65,
-      "avg_latency_to_next_ms": 8.36,
+      "node_count": 25,
+      "total_cpu_cores": 1929.17,
+      "total_ram_gb": 2079.1,
+      "total_gpu_vram_gb": 1752.1,
+      "total_storage_tb": 40.59,
+      "avg_latency_to_next_ms": 8.31,
       "llm_models": [
         "llama3.2:3b-instruct-q8_0"
       ]
     },
     "local": {
-      "node_count": 8,
-      "total_cpu_cores": 37.47,
-      "total_ram_gb": 69.4,
-      "total_gpu_vram_gb": 0.0,
-      "total_storage_tb": 0.27,
+      "node_count": 25,
+      "total_cpu_cores": 1640.84,
+      "total_ram_gb": 1180.2,
+      "total_gpu_vram_gb": 1388.5,
+      "total_storage_tb": 2.4,
       "avg_latency_to_next_ms": 3.0,
       "llm_models": [
         "llama3.2:1b-instruct-q8_0"
@@ -78,26 +87,26 @@
   },
   "comparison_table": {
     "multi_agent_TOPSIS": {
-      "placed_pct": 91.0,
-      "rejected_pct": 9.0,
-      "avg_latency_ms": 22.94,
-      "avg_decision_ms": 12.2,
-      "avg_score": 65.88,
+      "placed_pct": 90.8,
+      "rejected_pct": 9.2,
+      "avg_latency_ms": 23.77,
+      "avg_decision_ms": 7.61,
+      "avg_score": 62.96,
       "tier_distribution": {
-        "fog": 59,
-        "edge": 32
+        "fog": 474,
+        "edge": 434
       },
-      "edge_pct": 35.16,
+      "edge_pct": 47.8,
       "cloud_pct": 0.0
     },
     "B1_Cloud-Only": {
-      "placed_pct": 71.0,
-      "rejected_pct": 29.0,
+      "placed_pct": 5.8,
+      "rejected_pct": 94.2,
       "avg_latency_ms": 0.0,
-      "avg_decision_ms": 0.06,
+      "avg_decision_ms": 0.01,
       "avg_score": 100.0,
       "tier_distribution": {
-        "cloud": 71
+        "cloud": 58
       },
       "edge_pct": 0.0,
       "cloud_pct": 100.0
@@ -105,44 +114,47 @@
     "B2_Round-Robin": {
       "placed_pct": 100.0,
       "rejected_pct": 0.0,
-      "avg_latency_ms": 16.35,
-      "avg_decision_ms": 0.03,
+      "avg_latency_ms": 19.71,
+      "avg_decision_ms": 0.01,
       "avg_score": 50.0,
       "tier_distribution": {
-        "cloud": 40,
-        "fog": 41,
-        "edge": 19
+        "cloud": 21,
+        "fog": 422,
+        "edge": 351,
+        "local": 206
       },
-      "edge_pct": 19.0,
-      "cloud_pct": 40.0
+      "edge_pct": 55.7,
+      "cloud_pct": 2.1
     },
     "B3_Static-Threshold": {
       "placed_pct": 100.0,
       "rejected_pct": 0.0,
-      "avg_latency_ms": 14.05,
-      "avg_decision_ms": 0.26,
-      "avg_score": 59.27,
+      "avg_latency_ms": 19.92,
+      "avg_decision_ms": 0.05,
+      "avg_score": 63.53,
       "tier_distribution": {
-        "fog": 31,
-        "edge": 33,
-        "cloud": 36
+        "edge": 351,
+        "fog": 432,
+        "cloud": 43,
+        "local": 174
       },
-      "edge_pct": 33.0,
-      "cloud_pct": 36.0
+      "edge_pct": 52.5,
+      "cloud_pct": 4.3
     },
     "B4_Greedy-First-Fit": {
       "placed_pct": 100.0,
       "rejected_pct": 0.0,
-      "avg_latency_ms": 16.29,
-      "avg_decision_ms": 0.31,
-      "avg_score": 49.4,
+      "avg_latency_ms": 23.22,
+      "avg_decision_ms": 0.06,
+      "avg_score": 52.7,
       "tier_distribution": {
-        "fog": 38,
-        "edge": 33,
-        "cloud": 29
+        "edge": 382,
+        "fog": 527,
+        "cloud": 50,
+        "local": 41
       },
-      "edge_pct": 33.0,
-      "cloud_pct": 29.0
+      "edge_pct": 42.3,
+      "cloud_pct": 5.0
     }
   }
 }
