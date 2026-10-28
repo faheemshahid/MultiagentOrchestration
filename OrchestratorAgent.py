@@ -48,14 +48,14 @@ HOW MANY APPS ARE DEPLOYED:
 # ─────────────────────────────────────────────────────────────────────────────
 
 # ── Application settings ─2─────────────────────────────────────────────────────
-NUM_APPS:          int   = 250          # total apps to generate and deploy
+NUM_APPS:          int   = 1000         # total apps to generate and deploy
                                        # 10 = quick test, 30 = paper results
                                        # 100+ = large-scale experiment
 
 APP_DOMAINS: list = [                  # which domains to include
     "healthcare",
-    "industrial",
-    "general",
+    # "industrial",   # commented for focused healthcare experiment
+    # "general",      # commented for focused healthcare experiment
 ]
 # To run healthcare only:  APP_DOMAINS = ["healthcare"]
 # To run two domains:      APP_DOMAINS = ["healthcare", "industrial"]
