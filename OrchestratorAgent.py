@@ -55,7 +55,7 @@ NUM_APPS:          int   = 250          # total apps to generate and deploy
 APP_DOMAINS: list = [                  # which domains to include
     "healthcare",
     "industrial",
-    # "general",
+    "general",
 ]
 # To run healthcare only:  APP_DOMAINS = ["healthcare"]
 # To run two domains:      APP_DOMAINS = ["healthcare", "industrial"]
@@ -63,7 +63,7 @@ APP_DOMAINS: list = [                  # which domains to include
 APP_SUBTYPES: dict = {                 # None = all subtypes in that domain
     "healthcare": ["emergency_care", "remote_monitoring"],
     "industrial": None,
-    "general":    None,
+    # "general":    None,
 }
 # To select specific subtypes:
 #   "healthcare": ["emergency_care", "remote_monitoring"]

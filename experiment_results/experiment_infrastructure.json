@@ -1,7 +1,7 @@
 {
   "cloud": [
     {
-      "node_id": "C01-17DB",
+      "node_id": "C01-0615",
       "tier": "cloud",
       "hw_class": "datacenter_x86",
       "status": "idle",
@@ -18,7 +18,7 @@
   ],
   "fog": [
     {
-      "node_id": "F01-77CF",
+      "node_id": "F01-4A70",
       "tier": "fog",
       "hw_class": "edge_server_x86",
       "status": "idle",
@@ -33,7 +33,7 @@
       "latency_to_next_ms": 36.57
     },
     {
-      "node_id": "F02-285A",
+      "node_id": "F02-A836",
       "tier": "fog",
       "hw_class": "edge_server_x86",
       "status": "idle",
@@ -48,7 +48,7 @@
       "latency_to_next_ms": 44.22
     },
     {
-      "node_id": "F03-65E6",
+      "node_id": "F03-BD90",
       "tier": "fog",
       "hw_class": "edge_server_x86",
       "status": "idle",
@@ -63,7 +63,7 @@
       "latency_to_next_ms": 51.56
     },
     {
-      "node_id": "F04-657E",
+      "node_id": "F04-9578",
       "tier": "fog",
       "hw_class": "edge_server_x86",
       "status": "idle",
@@ -78,7 +78,7 @@
       "latency_to_next_ms": 19.1
     },
     {
-      "node_id": "F05-D8A3",
+      "node_id": "F05-70E0",
       "tier": "fog",
       "hw_class": "edge_server_x86",
       "status": "idle",
@@ -95,7 +95,7 @@
   ],
   "edge": [
     {
-      "node_id": "E01-A7E5",
+      "node_id": "E01-14DC",
       "tier": "edge",
       "hw_class": "mini_pc_x86",
       "status": "idle",
@@ -110,7 +110,7 @@
       "latency_to_next_ms": 11.4
     },
     {
-      "node_id": "E02-12E0",
+      "node_id": "E02-B683",
       "tier": "edge",
       "hw_class": "mini_pc_x86",
       "status": "idle",
@@ -125,7 +125,7 @@
       "latency_to_next_ms": 11.31
     },
     {
-      "node_id": "E03-17EF",
+      "node_id": "E03-73F1",
       "tier": "edge",
       "hw_class": "mini_pc_x86",
       "status": "idle",
@@ -140,7 +140,7 @@
       "latency_to_next_ms": 9.96
     },
     {
-      "node_id": "E04-69EE",
+      "node_id": "E04-DABF",
       "tier": "edge",
       "hw_class": "mini_pc_x86",
       "status": "idle",
@@ -155,7 +155,7 @@
       "latency_to_next_ms": 10.89
     },
     {
-      "node_id": "E05-7A7D",
+      "node_id": "E05-E7CF",
       "tier": "edge",
       "hw_class": "mini_pc_x86",
       "status": "idle",
@@ -172,7 +172,7 @@
   ],
   "local": [
     {
-      "node_id": "L01-389F",
+      "node_id": "L01-2541",
       "tier": "local",
       "hw_class": "raspberry_pi_5",
       "status": "idle",
@@ -187,7 +187,7 @@
       "latency_to_next_ms": 1.51
     },
     {
-      "node_id": "L02-5881",
+      "node_id": "L02-B3D0",
       "tier": "local",
       "hw_class": "raspberry_pi_5",
       "status": "idle",
@@ -202,7 +202,7 @@
       "latency_to_next_ms": 2.1
     },
     {
-      "node_id": "L03-CDD7",
+      "node_id": "L03-D096",
       "tier": "local",
       "hw_class": "raspberry_pi_5",
       "status": "idle",
@@ -217,7 +217,7 @@
       "latency_to_next_ms": 4.46
     },
     {
-      "node_id": "L04-3801",
+      "node_id": "L04-3E68",
       "tier": "local",
       "hw_class": "raspberry_pi_5",
       "status": "idle",
@@ -232,7 +232,7 @@
       "latency_to_next_ms": 1.88
     },
     {
-      "node_id": "L05-E6C1",
+      "node_id": "L05-75D7",
       "tier": "local",
       "hw_class": "raspberry_pi_5",
       "status": "idle",
