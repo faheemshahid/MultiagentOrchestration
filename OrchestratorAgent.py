@@ -48,14 +48,14 @@ HOW MANY APPS ARE DEPLOYED:
 # ─────────────────────────────────────────────────────────────────────────────
 
 # ── Application settings ─2─────────────────────────────────────────────────────
-NUM_APPS:          int   = 1000          # total apps to generate and deploy
+NUM_APPS:          int   = 250          # total apps to generate and deploy
                                        # 10 = quick test, 30 = paper results
                                        # 100+ = large-scale experiment
 
 APP_DOMAINS: list = [                  # which domains to include
     "healthcare",
     "industrial",
-    "general",
+    # "general",
 ]
 # To run healthcare only:  APP_DOMAINS = ["healthcare"]
 # To run two domains:      APP_DOMAINS = ["healthcare", "industrial"]
@@ -68,7 +68,7 @@ APP_SUBTYPES: dict = {                 # None = all subtypes in that domain
 # To select specific subtypes:
 #   "healthcare": ["emergency_care", "remote_monitoring"]
 
-REQUIREMENT_MODE: str = "random"       # "random" | "nominal" | "worst"
+REQUIREMENT_MODE: str = "worst"       # "random" | "nominal" | "worst"
 RANDOM_SEED: int      = 42             # set None for non-reproducible runs
 
 # ── Infrastructure settings ───────────────────────────────────────────────────

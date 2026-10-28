@@ -1,72 +1,73 @@
 {
   "multi_agent_TOPSIS": {
-    "placed_pct": 90.8,
-    "rejected_pct": 9.2,
-    "avg_latency_ms": 23.77,
-    "avg_decision_ms": 7.61,
-    "avg_score": 62.96,
+    "placed_pct": 66.0,
+    "rejected_pct": 34.0,
+    "avg_latency_ms": 25.97,
+    "avg_decision_ms": 1.25,
+    "avg_score": 71.98,
     "tier_distribution": {
-      "fog": 474,
-      "edge": 434
+      "local": 15,
+      "fog": 74,
+      "edge": 76
     },
-    "edge_pct": 47.8,
+    "edge_pct": 55.15,
     "cloud_pct": 0.0
   },
   "B1_Cloud-Only": {
-    "placed_pct": 5.8,
-    "rejected_pct": 94.2,
-    "avg_latency_ms": 0.0,
-    "avg_decision_ms": 0.01,
-    "avg_score": 100.0,
+    "placed_pct": 9.6,
+    "rejected_pct": 90.4,
+    "avg_latency_ms": 96.0,
+    "avg_decision_ms": 0.0,
+    "avg_score": 28.0,
     "tier_distribution": {
-      "cloud": 58
+      "cloud": 24
     },
     "edge_pct": 0.0,
     "cloud_pct": 100.0
   },
   "B2_Round-Robin": {
-    "placed_pct": 100.0,
-    "rejected_pct": 0.0,
-    "avg_latency_ms": 19.71,
-    "avg_decision_ms": 0.01,
-    "avg_score": 50.0,
+    "placed_pct": 62.0,
+    "rejected_pct": 38.0,
+    "avg_latency_ms": 33.12,
+    "avg_decision_ms": 0.02,
+    "avg_score": 42.0,
     "tier_distribution": {
-      "cloud": 21,
-      "fog": 422,
-      "edge": 351,
-      "local": 206
+      "cloud": 16,
+      "fog": 63,
+      "edge": 59,
+      "local": 17
     },
-    "edge_pct": 55.7,
-    "cloud_pct": 2.1
+    "edge_pct": 49.03,
+    "cloud_pct": 10.32
   },
   "B3_Static-Threshold": {
-    "placed_pct": 100.0,
-    "rejected_pct": 0.0,
-    "avg_latency_ms": 19.92,
-    "avg_decision_ms": 0.05,
-    "avg_score": 63.53,
+    "placed_pct": 48.8,
+    "rejected_pct": 51.2,
+    "avg_latency_ms": 30.34,
+    "avg_decision_ms": 0.02,
+    "avg_score": 30.64,
     "tier_distribution": {
-      "edge": 351,
-      "fog": 432,
-      "cloud": 43,
-      "local": 174
+      "edge": 48,
+      "fog": 47,
+      "cloud": 10,
+      "local": 17
     },
-    "edge_pct": 52.5,
-    "cloud_pct": 4.3
+    "edge_pct": 53.28,
+    "cloud_pct": 8.2
   },
   "B4_Greedy-First-Fit": {
-    "placed_pct": 100.0,
-    "rejected_pct": 0.0,
-    "avg_latency_ms": 23.22,
-    "avg_decision_ms": 0.06,
-    "avg_score": 52.7,
+    "placed_pct": 63.6,
+    "rejected_pct": 36.4,
+    "avg_latency_ms": 32.48,
+    "avg_decision_ms": 0.02,
+    "avg_score": 22.59,
     "tier_distribution": {
-      "edge": 382,
-      "fog": 527,
-      "cloud": 50,
-      "local": 41
+      "edge": 63,
+      "fog": 67,
+      "cloud": 14,
+      "local": 15
     },
-    "edge_pct": 42.3,
-    "cloud_pct": 5.0
+    "edge_pct": 49.06,
+    "cloud_pct": 8.81
   }
 }

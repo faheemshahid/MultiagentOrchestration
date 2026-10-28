@@ -747,12 +747,14 @@ class QoSProfilerAgent:
         hard_dl = min(hard_dl, app.latency_ms_max)
         soft_dl = min(soft_dl, app.latency_ms_target)
 
-        if urgency in ["critical", "high"]:
-            preferred, fallbacks = "edge", ["fog", "cloud"]
+        if urgency == "critical":
+            preferred, fallbacks = "local", ["edge", "fog", "cloud"]
+        elif urgency == "high":
+            preferred, fallbacks = "edge", ["local", "fog", "cloud"]
         elif urgency == "medium":
-            preferred, fallbacks = "fog",  ["edge", "cloud"]
+            preferred, fallbacks = "fog",  ["edge", "local", "cloud"]
         else:
-            preferred, fallbacks = "cloud", ["fog", "edge"]
+            preferred, fallbacks = "cloud", ["fog", "edge", "local"]
 
         p.urgency_level       = urgency
         p.latency_budget_ms   = hard_dl
