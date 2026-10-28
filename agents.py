@@ -534,7 +534,7 @@ class IntentParserAgent:
         return nc
 
     def run(self, app) -> IntentProfile:
-        t0 = time.time()
+        t0 = time.perf_counter()
         profile = IntentProfile()
         text = app.intent_text
 
@@ -602,7 +602,7 @@ class IntentParserAgent:
         profile.tfidf_top_terms     = top_terms
         profile.llm_confidence      = float(parsed.get("confidence", 0.75))
         profile.llm_reasoning       = parsed.get("reasoning", "")
-        profile.parse_time_ms       = round((time.time() - t0) * 1000, 2)
+        profile.parse_time_ms       = round((time.perf_counter() - t0) * 1000, 4)
 
         if AGENT_VERBOSE:
             print(f"    Final: domain={profile.detected_domain}  "
@@ -702,7 +702,7 @@ class QoSProfilerAgent:
         }
 
     def run(self, app, intent: IntentProfile) -> QoSProfile:
-        t0 = time.time()
+        t0 = time.perf_counter()
         p  = QoSProfile()
 
         if AGENT_VERBOSE:
@@ -774,7 +774,7 @@ class QoSProfilerAgent:
         p.preferred_tier      = preferred
         p.fallback_tiers      = fallbacks
         p.sla_violation_cost  = round(criticality * 10.0, 2)
-        p.profiling_time_ms   = round((time.time() - t0) * 1000, 2)
+        p.profiling_time_ms   = round((time.perf_counter() - t0) * 1000, 4)
 
         if AGENT_VERBOSE:
             print(f"    criticality={criticality:.4f}  "
@@ -953,7 +953,7 @@ class ClassificationAgent:
         return f"{domain}/unknown/{subtype}"
 
     def run(self, app, intent: IntentProfile, qos: QoSProfile) -> ClassificationResult:
-        t0 = time.time()
+        t0 = time.perf_counter()
         r  = ClassificationResult()
 
         if AGENT_VERBOSE:
@@ -1034,7 +1034,7 @@ class ClassificationAgent:
         r.estimated_bw_kbps   = bw_r
         r.model_size_class    = self.MODEL_SIZE.get(compute_cc, "3b")
         r.llm_refinement_used = llm_refined
-        r.classification_ms   = round((time.time() - t0) * 1000, 2)
+        r.classification_ms   = round((time.perf_counter() - t0) * 1000, 4)
 
         if AGENT_VERBOSE:
             print(f"    → {r.primary_class}  compute={compute_cc}  "
@@ -1090,7 +1090,7 @@ class ResourceMonitorAgent:
         return round(updated, 4)
 
     def run(self, infrastructure) -> ResourceSnapshot:
-        t0 = time.time()
+        t0 = time.perf_counter()
         self._call_count += 1
         snap = ResourceSnapshot()
         snap.timestamp = time.time()
@@ -1157,7 +1157,7 @@ class ResourceMonitorAgent:
         snap.tier_ema_cpu     = dict(self._ema_cpu)
         snap.tier_ema_ram     = dict(self._ema_ram)
         snap.sla_violations   = sla_viol
-        snap.monitoring_ms    = round((time.time() - t0) * 1000, 2)
+        snap.monitoring_ms    = round((time.perf_counter() - t0) * 1000, 4)
 
         if overloaded:
             print(f"    ⚠  Overloaded nodes: {overloaded}")
@@ -1294,7 +1294,7 @@ class PlacementAgent:
 
     def run(self, app, qos: QoSProfile, cls: ClassificationResult,
             snap: ResourceSnapshot, infrastructure) -> PlacementDecision:
-        t0 = time.time()
+        t0 = time.perf_counter()
         d  = PlacementDecision()
         d.instance_id = app.instance_id
         alternatives_tried: list = []
@@ -1354,7 +1354,7 @@ class PlacementAgent:
             d.rejection_reason  = "no_feasible_node_all_tiers"
             d.alternatives_tried = alternatives_tried
             d.topsis_ranking    = all_rankings
-            d.placement_ms      = round((time.time() - t0) * 1000, 2)
+            d.placement_ms      = round((time.perf_counter() - t0) * 1000, 4)
             if AGENT_VERBOSE:
                 print(f"    ✗  REJECTED — no feasible node found")
             return d
@@ -1363,7 +1363,7 @@ class PlacementAgent:
         if not best_node.allocate(app):
             d.admission_status = DeploymentStatus.FAILED.value
             d.rejection_reason = "allocation_race_condition"
-            d.placement_ms     = round((time.time() - t0) * 1000, 2)
+            d.placement_ms     = round((time.perf_counter() - t0) * 1000, 4)
             return d
 
         d.selected_node_id   = best_node.node_id
@@ -1379,7 +1379,7 @@ class PlacementAgent:
         d.topsis_ranking     = all_rankings
         d.admission_status   = DeploymentStatus.PLACED.value
         d.alternatives_tried = alternatives_tried
-        d.placement_ms       = round((time.time() - t0) * 1000, 2)
+        d.placement_ms       = round((time.perf_counter() - t0) * 1000, 4)
 
         if AGENT_VERBOSE:
             print(f"    ✓  PLACED → {best_node.node_id}  "
@@ -1427,7 +1427,7 @@ class OffloadAgent:
 
     def run(self, snap: ResourceSnapshot, infrastructure,
             active_placements: dict) -> OffloadDecision:
-        t0 = time.time()
+        t0 = time.perf_counter()
         d  = OffloadDecision()
 
         if AGENT_VERBOSE:
@@ -1448,7 +1448,7 @@ class OffloadAgent:
 
         if not overloaded_with_apps or not active_placements:
             d.triggered  = False
-            d.offload_latency_ms = round((time.time() - t0) * 1000, 2)
+            d.offload_latency_ms = round((time.perf_counter() - t0) * 1000, 4)
             if AGENT_VERBOSE:
                 print(f"    No offload needed (all nodes within EMA threshold)")
             return d
@@ -1491,7 +1491,7 @@ class OffloadAgent:
 
         if tgt is None:
             d.success = False
-            d.offload_latency_ms = round((time.time() - t0) * 1000, 2)
+            d.offload_latency_ms = round((time.perf_counter() - t0) * 1000, 4)
             if AGENT_VERBOSE:
                 print(f"    ✗  No target node available for offload")
             return d
@@ -1518,7 +1518,7 @@ class OffloadAgent:
         d.target_ema_cpu   = tgt_cpu
         d.apps_offloaded   = migrated
         d.success          = len(migrated) > 0
-        d.offload_latency_ms = round((time.time() - t0) * 1000, 2)
+        d.offload_latency_ms = round((time.perf_counter() - t0) * 1000, 4)
         return d
 
 
@@ -1548,7 +1548,7 @@ def run_agent_pipeline(app, infrastructure,
     active_placements is updated in-place by PlacementAgent and OffloadAgent.
     Returns AgentDecision with all six agents' outputs aggregated.
     """
-    t_start  = time.time()
+    t_start = time.perf_counter()
     decision = AgentDecision(instance_id=app.instance_id, intent_text=app.intent_text)
 
     # Agent 1 — TF-IDF cosine + LLM
@@ -1583,7 +1583,7 @@ def run_agent_pipeline(app, infrastructure,
             active_placements[app.instance_id] = (app, placed_node)
 
     decision.final_status      = decision.placement.admission_status
-    decision.total_pipeline_ms = round((time.time() - t_start) * 1000, 2)
+    decision.total_pipeline_ms = round((time.perf_counter() - t_start) * 1000, 4)
     return decision
 
 
