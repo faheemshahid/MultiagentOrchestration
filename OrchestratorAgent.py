@@ -122,6 +122,7 @@ import json
 import time
 import textwrap
 import traceback
+import statistics
 from datetime import datetime
 from collections import Counter
 
@@ -700,13 +701,17 @@ def build_config() -> dict:
 #  MAIN ORCHESTRATOR
 # ─────────────────────────────────────────────────────────────────────────────
 
-def main():
+def main(seed_override=None, iteration: int = 1):
     t_total = time.time()
     print_banner()
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     shared_state: dict = {}
     config:       dict = build_config()
+
+    # Apply seed override for multi-iteration runs
+    if seed_override is not None:
+        config["seed"] = seed_override
 
     # ─────────────────────────────────────────────────────────────────────────
     #  STEP 1 — Generate applications
@@ -918,12 +923,138 @@ def main():
 
 
 # ─────────────────────────────────────────────────────────────────────────────
+#  MULTI-ITERATION RUNNER
+#  Runs the experiment N times with seeds RANDOM_SEED, RANDOM_SEED+1, ...
+#  Averages all key metrics and saves aggregated results.
+# ─────────────────────────────────────────────────────────────────────────────
+
+def run_iterations(num_iterations: int):
+    """Run the experiment num_iterations times and report mean ± std."""
+
+    t_total_all = time.time()
+
+    # Collect per-iteration metrics
+    iter_metrics: list = []   # list of dicts, one per iteration
+
+    for it in range(num_iterations):
+        seed = RANDOM_SEED + it if RANDOM_SEED is not None else None
+        print(f"\n\n{'▓' * 72}")
+        print(f"  ITERATION {it + 1} / {num_iterations}   seed={seed}")
+        print(f"{'▓' * 72}")
+
+        # Override seed for this iteration
+        import builtins
+        builtins._ITER_SEED_OVERRIDE = seed
+
+        # Run one full experiment
+        state = main(seed_override=seed, iteration=it + 1)
+
+        # Extract key metrics from comparison_table
+        ct = state.get("comparison_table", {})
+        decisions = state.get("agent_decisions", [])
+
+        placed = [d for d in decisions if d.final_status == "placed"]
+        placement_rate = len(placed) / max(len(decisions), 1) * 100
+
+        ma_key = next((k for k in ct if "multi_agent" in k), None)
+        ma = ct.get(ma_key, {}) if ma_key else {}
+
+        iter_metrics.append({
+            "iteration":       it + 1,
+            "seed":            seed,
+            "placement_rate":  placement_rate,
+            "avg_score":       ma.get("avg_score",       0.0),
+            "avg_latency_ms":  ma.get("avg_latency_ms",  0.0),
+            "avg_decision_ms": ma.get("avg_decision_ms", 0.0),
+            "edge_pct":        ma.get("edge_pct",        0.0),
+            "cloud_pct":       ma.get("cloud_pct",       0.0),
+        })
+
+    # ── Aggregate across iterations ──────────────────────────────────────────
+    total_elapsed = round(time.time() - t_total_all, 2)
+
+    def _mean(key):
+        vals = [m[key] for m in iter_metrics]
+        return statistics.mean(vals)
+
+    def _std(key):
+        vals = [m[key] for m in iter_metrics]
+        return statistics.stdev(vals) if len(vals) > 1 else 0.0
+
+    print(f"\n\n{'█' * 72}")
+    print(f"  MULTI-ITERATION SUMMARY — {num_iterations} runs")
+    print(f"{'█' * 72}")
+    print(f"\n  {'Metric':<25} {'Mean':>10}  {'± Std':>10}  {'Min':>10}  {'Max':>10}")
+    print(f"  {'─' * 70}")
+
+    metrics_display = [
+        ("Placement rate (%)",  "placement_rate"),
+        ("Avg placement score", "avg_score"),
+        ("Avg latency (ms)",    "avg_latency_ms"),
+        ("Avg decision (ms)",   "avg_decision_ms"),
+        ("Edge placement (%)",  "edge_pct"),
+        ("Cloud placement (%)", "cloud_pct"),
+    ]
+    for label, key in metrics_display:
+        vals = [m[key] for m in iter_metrics]
+        print(f"  {label:<25} {_mean(key):>10.2f}  {_std(key):>10.2f}  "
+              f"{min(vals):>10.2f}  {max(vals):>10.2f}")
+
+    print(f"\n  Seeds used    : {[m['seed'] for m in iter_metrics]}")
+    print(f"  Total elapsed : {total_elapsed}s")
+
+    # ── Save aggregated results ──────────────────────────────────────────────
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+    agg = {
+        "experiment": {
+            "timestamp":      datetime.now().isoformat(),
+            "num_iterations": num_iterations,
+            "seeds":          [m["seed"] for m in iter_metrics],
+            "num_apps":       NUM_APPS,
+            "domains":        APP_DOMAINS,
+            "total_elapsed_s": total_elapsed,
+        },
+        "iterations": iter_metrics,
+        "aggregate": {
+            key: {"mean": round(_mean(key), 4), "std": round(_std(key), 4)}
+            for _, key in metrics_display
+        },
+    }
+    agg_path = os.path.join(OUTPUT_DIR, "experiment_aggregate.json")
+    with open(agg_path, "w") as f:
+        json.dump(agg, f, indent=2)
+
+    print(f"\n  Aggregated results saved to: {agg_path}")
+    print(f"{'█' * 72}\n")
+
+
+# ─────────────────────────────────────────────────────────────────────────────
 #  ENTRY POINT
 # ─────────────────────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
     try:
-        main()
+        # ── Ask user for number of iterations ────────────────────────────────
+        print("\n" + "═" * 72)
+        print("  Intent-Aware Multi-Agent IoT Orchestration")
+        print("═" * 72)
+        try:
+            raw = input(f"\n  How many iterations to run? [default = 1]: ").strip()
+            num_iter = int(raw) if raw else 1
+            if num_iter < 1:
+                num_iter = 1
+        except (ValueError, EOFError):
+            num_iter = 1
+
+        print(f"\n  Running {num_iter} iteration(s) "
+              f"with seed(s): {[RANDOM_SEED + i for i in range(num_iter)]}")
+        print()
+
+        if num_iter == 1:
+            main()
+        else:
+            run_iterations(num_iter)
+
     except KeyboardInterrupt:
         print("\n\n  [STOPPED] Experiment interrupted by user.\n")
         sys.exit(0)
