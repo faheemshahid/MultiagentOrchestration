@@ -2301,6 +2301,128 @@ def fig27_decision_overhead(decisions: list):
     _save(fig, "fig27_decision_overhead")
 
 
+def fig28_multi_iteration_summary(agg_path: str = None):
+    """
+    Fig. 28  Multi-Iteration Experiment Summary
+    ─────────────────────────────────────────────
+    Left panel  — Bar chart: mean placement rate, avg placement score,
+                  edge placement %, cloud placement % across iterations.
+    Right panel — Bar chart: avg pipeline latency and avg decision time
+                  per iteration (individual runs + mean line).
+
+    Reads experiment_aggregate.json produced by the multi-iteration runner.
+    Skips gracefully if the file does not exist (single-iteration run).
+    """
+    import os, json, numpy as np
+
+    # ── Locate aggregate results file ────────────────────────────────────────
+    if agg_path is None:
+        agg_path = os.path.join(OUTPUT_DIR, "experiment_aggregate.json")
+    if not os.path.exists(agg_path):
+        print(f"  [SKIP] fig28: {agg_path} not found — run with >1 iteration first")
+        return
+
+    with open(agg_path) as f:
+        agg = json.load(f)
+
+    iterations = agg.get("iterations", [])
+    aggregate  = agg.get("aggregate",  {})
+    num_iter   = len(iterations)
+    seeds      = [m["seed"] for m in iterations]
+    x_labels   = [f"Seed {s}" for s in seeds]
+    x          = np.arange(num_iter)
+
+    if num_iter == 0:
+        print("  [SKIP] fig28: no iteration data found in aggregate file")
+        return
+
+    # ── Figure layout: two side-by-side panels ───────────────────────────────
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(COL_W * 2, ROW_H * 1.4))
+
+    bar_w  = 0.22
+    colors = ["#2166ac", "#4dac26", "#d01c8b", "#f1a340"]
+
+    # ── Left panel: placement rate, placement score, edge%, cloud% ───────────
+    metrics_left = [
+        ("placement_rate",  "Placement Rate (%)",  colors[0]),
+        ("avg_score",       "Avg Score",            colors[1]),
+        ("edge_pct",        "Edge Placement (%)",   colors[2]),
+        ("cloud_pct",       "Cloud Placement (%)",  colors[3]),
+    ]
+
+    for idx, (key, label, color) in enumerate(metrics_left):
+        vals  = [m[key] for m in iterations]
+        mean  = aggregate.get(key, {}).get("mean", np.mean(vals))
+        bars  = ax1.bar(x + idx * bar_w, vals, bar_w,
+                        label=label, color=color, alpha=0.80, edgecolor="white", linewidth=0.5)
+        # Mean line across all bars for this metric
+        ax1.hlines(mean,
+                   x[0] + idx * bar_w - bar_w * 0.4,
+                   x[-1] + idx * bar_w + bar_w * 0.4,
+                   colors=color, linewidths=1.4, linestyles="--", alpha=0.95)
+
+    ax1.set_xticks(x + bar_w * 1.5)
+    ax1.set_xticklabels(x_labels, fontsize=6)
+    ax1.set_ylabel("Value", fontsize=7)
+    ax1.set_xlabel("Iteration (seed)", fontsize=7)
+    ax1.set_title("Placement Quality Metrics", fontsize=7, fontweight="bold", pad=4)
+    ax1.legend(fontsize=5.5, loc="upper right", framealpha=0.7)
+    ax1.tick_params(axis="both", labelsize=6)
+    ax1.spines["top"].set_visible(False)
+    ax1.spines["right"].set_visible(False)
+    ax1.set_ylim(bottom=0)
+
+    # Annotate mean ± std above the group
+    for idx, (key, label, color) in enumerate(metrics_left):
+        vals = [m[key] for m in iterations]
+        mean = np.mean(vals)
+        std  = np.std(vals, ddof=1) if len(vals) > 1 else 0.0
+        ax1.text(x[-1] + idx * bar_w + bar_w * 0.5,
+                 mean + std + 1.5,
+                 f"μ={mean:.1f}\n±{std:.1f}",
+                 ha="center", va="bottom", fontsize=4.5, color=color)
+
+    # ── Right panel: latency per iteration ───────────────────────────────────
+    lat_vals = [m["avg_latency_ms"]  for m in iterations]
+    dec_vals = [m["avg_decision_ms"] for m in iterations]
+
+    lat_mean = aggregate.get("avg_latency_ms",  {}).get("mean", np.mean(lat_vals))
+    dec_mean = aggregate.get("avg_decision_ms", {}).get("mean", np.mean(dec_vals))
+    lat_std  = aggregate.get("avg_latency_ms",  {}).get("std",  0.0)
+    dec_std  = aggregate.get("avg_decision_ms", {}).get("std",  0.0)
+
+    ax2.bar(x - bar_w / 2, lat_vals, bar_w, label="Avg Latency (ms)",
+            color="#2166ac", alpha=0.80, edgecolor="white", linewidth=0.5)
+    ax2.bar(x + bar_w / 2, dec_vals, bar_w, label="Avg Decision (ms)",
+            color="#d01c8b", alpha=0.80, edgecolor="white", linewidth=0.5)
+
+    ax2.hlines(lat_mean, -0.5, num_iter - 0.5, colors="#2166ac",
+               linewidths=1.4, linestyles="--", alpha=0.95,
+               label=f"Lat mean={lat_mean:.1f}±{lat_std:.1f}")
+    ax2.hlines(dec_mean, -0.5, num_iter - 0.5, colors="#d01c8b",
+               linewidths=1.4, linestyles=":",  alpha=0.95,
+               label=f"Dec mean={dec_mean:.1f}±{dec_std:.1f}")
+
+    ax2.set_xticks(x)
+    ax2.set_xticklabels(x_labels, fontsize=6)
+    ax2.set_ylabel("Time (ms)", fontsize=7)
+    ax2.set_xlabel("Iteration (seed)", fontsize=7)
+    ax2.set_title("Pipeline & Decision Latency per Iteration", fontsize=7, fontweight="bold", pad=4)
+    ax2.legend(fontsize=5.5, loc="upper right", framealpha=0.7)
+    ax2.tick_params(axis="both", labelsize=6)
+    ax2.spines["top"].set_visible(False)
+    ax2.spines["right"].set_visible(False)
+    ax2.set_ylim(bottom=0)
+
+    fig.suptitle(
+        f"Fig. 28  Multi-Iteration Experiment Reproducibility ({num_iter} runs, "
+        f"seeds {seeds[0]}–{seeds[-1]})",
+        fontsize=8, y=1.02
+    )
+    plt.tight_layout()
+    _save(fig, "fig28_multi_iteration_summary")
+
+
 def run_all_figures(decisions, baselines, comparison_table, infra_data, capacity_summary=None):
     """Run all figures that have data available."""
     print(f"\n[figures.py] Generating IEEE figures → {OUTPUT_DIR}/\n")
@@ -2334,6 +2456,7 @@ def run_all_figures(decisions, baselines, comparison_table, infra_data, capacity
         25: lambda: fig25_resource_utilisation(decisions, baselines, infra_data),
         26: lambda: fig26_qos_sla_satisfaction(decisions, baselines),
         27: lambda: fig27_decision_overhead(decisions),
+        28: lambda: fig28_multi_iteration_summary(),
     }
 
     to_run = (
