@@ -2317,7 +2317,7 @@ def fig28_multi_iteration_summary(agg_path: str = None):
 
     # ── Locate aggregate results file ────────────────────────────────────────
     if agg_path is None:
-        agg_path = os.path.join(OUTPUT_DIR, "experiment_aggregate.json")
+        agg_path = os.path.join(INPUT_DIR, "experiment_aggregate.json")
     if not os.path.exists(agg_path):
         print(f"  [SKIP] fig28: {agg_path} not found — run with >1 iteration first")
         return
