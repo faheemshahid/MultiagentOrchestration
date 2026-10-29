@@ -1683,17 +1683,43 @@ def run(config: dict, shared_state: dict) -> dict:
         active_placements: dict = {}
         decisions:         list = []
 
+        # Simulated time: apps arrive every INTER_ARRIVAL_S seconds.
+        # Before placing each app we release any app whose simulated
+        # lifetime has expired, freeing node resources for new arrivals.
+        INTER_ARRIVAL_S: float = 0.05   # 50 ms between arrivals → 50 s window for 1000 apps
+        sim_time:        float = 0.0
+        # Maps instance_id → expiry simulated-time
+        expiry_times:    dict  = {}
+
         print(f"\n[agents.py] Running {len(apps)} applications through "
               f"6-agent ML pipeline ...")
 
         for i, app in enumerate(apps):
+            sim_time += INTER_ARRIVAL_S
+
+            # --- release expired apps before attempting next placement ---
+            released_ids = []
+            for inst_id, (placed_app, node) in list(active_placements.items()):
+                if expiry_times.get(inst_id, float("inf")) <= sim_time:
+                    node.release(placed_app)
+                    released_ids.append(inst_id)
+            for inst_id in released_ids:
+                del active_placements[inst_id]
+                del expiry_times[inst_id]
+            if released_ids and AGENT_VERBOSE:
+                print(f"  [sim t={sim_time:.2f}s] Released {len(released_ids)} expired app(s)")
+
             if AGENT_VERBOSE:
                 print(f"\n{'─' * 72}")
                 print(f"  App {i+1}/{len(apps)} — {app.instance_id}  "
                       f"({app.domain}/{app.subtype})")
-            decisions.append(
-                run_agent_pipeline(app, infra, active_placements)
-            )
+            decision = run_agent_pipeline(app, infra, active_placements)
+            decisions.append(decision)
+
+            # Record expiry time for apps that were successfully placed
+            if (inst_id := app.instance_id) in active_placements:
+                lifetime = getattr(app, "app_lifetime_s", 5.0)
+                expiry_times[inst_id] = sim_time + lifetime
 
         shared_state["agent_decisions"]   = decisions
         shared_state["active_placements"] = active_placements
