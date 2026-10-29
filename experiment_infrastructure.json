@@ -1,7 +1,7 @@
 {
   "cloud": [
     {
-      "node_id": "C01-0C6B",
+      "node_id": "C01-107D",
       "tier": "cloud",
       "hw_class": "datacenter_x86",
       "status": "idle",
@@ -9,8 +9,8 @@
       "ram_utilisation_pct": 0.0,
       "gpu_utilisation_pct": 0.0,
       "active_apps": 0,
-      "available_cpu_cores": 104.18,
-      "available_ram_mb": 517741,
+      "available_cpu_cores": 312.55,
+      "available_ram_mb": 1035483,
       "available_gpu_vram_mb": 375724,
       "available_uplink_kbps": 9436213,
       "latency_to_next_ms": 55.88
@@ -18,7 +18,7 @@
   ],
   "fog": [
     {
-      "node_id": "F01-8FDC",
+      "node_id": "F01-A896",
       "tier": "fog",
       "hw_class": "edge_server_x86",
       "status": "idle",
@@ -26,14 +26,14 @@
       "ram_utilisation_pct": 0.0,
       "gpu_utilisation_pct": 0.0,
       "active_apps": 0,
-      "available_cpu_cores": 78.13,
-      "available_ram_mb": 360218,
+      "available_cpu_cores": 195.32,
+      "available_ram_mb": 502958,
       "available_gpu_vram_mb": 21656,
       "available_uplink_kbps": 1114951,
       "latency_to_next_ms": 37.11
     },
     {
-      "node_id": "F02-0533",
+      "node_id": "F02-4C35",
       "tier": "fog",
       "hw_class": "edge_server_x86",
       "status": "idle",
@@ -41,16 +41,61 @@
       "ram_utilisation_pct": 0.0,
       "gpu_utilisation_pct": 0.0,
       "active_apps": 0,
-      "available_cpu_cores": 78.78,
-      "available_ram_mb": 445501,
+      "available_cpu_cores": 196.95,
+      "available_ram_mb": 447347,
       "available_gpu_vram_mb": 27519,
-      "available_uplink_kbps": 933707,
-      "latency_to_next_ms": 39.8
+      "available_uplink_kbps": 1071571,
+      "latency_to_next_ms": 37.77
+    },
+    {
+      "node_id": "F03-0CF7",
+      "tier": "fog",
+      "hw_class": "edge_server_x86",
+      "status": "idle",
+      "cpu_utilisation_pct": 0.0,
+      "ram_utilisation_pct": 0.0,
+      "gpu_utilisation_pct": 0.0,
+      "active_apps": 0,
+      "available_cpu_cores": 192.8,
+      "available_ram_mb": 535809,
+      "available_gpu_vram_mb": 27831,
+      "available_uplink_kbps": 872780,
+      "latency_to_next_ms": 33.72
+    },
+    {
+      "node_id": "F04-E1CC",
+      "tier": "fog",
+      "hw_class": "edge_server_x86",
+      "status": "idle",
+      "cpu_utilisation_pct": 0.0,
+      "ram_utilisation_pct": 0.0,
+      "gpu_utilisation_pct": 0.0,
+      "active_apps": 0,
+      "available_cpu_cores": 219.76,
+      "available_ram_mb": 496051,
+      "available_gpu_vram_mb": 25618,
+      "available_uplink_kbps": 874025,
+      "latency_to_next_ms": 38.73
+    },
+    {
+      "node_id": "F05-2EB2",
+      "tier": "fog",
+      "hw_class": "edge_server_x86",
+      "status": "idle",
+      "cpu_utilisation_pct": 0.0,
+      "ram_utilisation_pct": 0.0,
+      "gpu_utilisation_pct": 0.0,
+      "active_apps": 0,
+      "available_cpu_cores": 192.81,
+      "available_ram_mb": 541282,
+      "available_gpu_vram_mb": 26096,
+      "available_uplink_kbps": 1044081,
+      "latency_to_next_ms": 39.58
     }
   ],
   "edge": [
     {
-      "node_id": "E01-B5F7",
+      "node_id": "E01-1902",
       "tier": "edge",
       "hw_class": "mini_pc_x86",
       "status": "idle",
@@ -58,14 +103,14 @@
       "ram_utilisation_pct": 0.0,
       "gpu_utilisation_pct": 0.0,
       "active_apps": 0,
-      "available_cpu_cores": 49.16,
-      "available_ram_mb": 221746,
+      "available_cpu_cores": 123.93,
+      "available_ram_mb": 244239,
       "available_gpu_vram_mb": 0,
-      "available_uplink_kbps": 104782,
-      "latency_to_next_ms": 8.09
+      "available_uplink_kbps": 97433,
+      "latency_to_next_ms": 8.14
     },
     {
-      "node_id": "E02-4CB1",
+      "node_id": "E02-7534",
       "tier": "edge",
       "hw_class": "mini_pc_x86",
       "status": "idle",
@@ -73,14 +118,14 @@
       "ram_utilisation_pct": 0.0,
       "gpu_utilisation_pct": 0.0,
       "active_apps": 0,
-      "available_cpu_cores": 53.96,
-      "available_ram_mb": 220560,
+      "available_cpu_cores": 132.34,
+      "available_ram_mb": 227029,
       "available_gpu_vram_mb": 0,
-      "available_uplink_kbps": 103918,
-      "latency_to_next_ms": 7.35
+      "available_uplink_kbps": 98145,
+      "latency_to_next_ms": 8.16
     },
     {
-      "node_id": "E03-90F6",
+      "node_id": "E03-9908",
       "tier": "edge",
       "hw_class": "mini_pc_x86",
       "status": "idle",
@@ -88,14 +133,14 @@
       "ram_utilisation_pct": 0.0,
       "gpu_utilisation_pct": 0.0,
       "active_apps": 0,
-      "available_cpu_cores": 48.94,
-      "available_ram_mb": 191116,
+      "available_cpu_cores": 109.65,
+      "available_ram_mb": 282964,
       "available_gpu_vram_mb": 0,
-      "available_uplink_kbps": 99857,
-      "latency_to_next_ms": 7.65
+      "available_uplink_kbps": 93679,
+      "latency_to_next_ms": 7.43
     },
     {
-      "node_id": "E04-20CA",
+      "node_id": "E04-8AC0",
       "tier": "edge",
       "hw_class": "mini_pc_x86",
       "status": "idle",
@@ -103,16 +148,31 @@
       "ram_utilisation_pct": 0.0,
       "gpu_utilisation_pct": 0.0,
       "active_apps": 0,
-      "available_cpu_cores": 59.39,
-      "available_ram_mb": 201210,
+      "available_cpu_cores": 134.32,
+      "available_ram_mb": 251568,
       "available_gpu_vram_mb": 0,
-      "available_uplink_kbps": 90354,
-      "latency_to_next_ms": 8.34
+      "available_uplink_kbps": 101696,
+      "latency_to_next_ms": 7.06
+    },
+    {
+      "node_id": "E05-0385",
+      "tier": "edge",
+      "hw_class": "mini_pc_x86",
+      "status": "idle",
+      "cpu_utilisation_pct": 0.0,
+      "ram_utilisation_pct": 0.0,
+      "gpu_utilisation_pct": 0.0,
+      "active_apps": 0,
+      "available_cpu_cores": 130.51,
+      "available_ram_mb": 273254,
+      "available_gpu_vram_mb": 0,
+      "available_uplink_kbps": 104526,
+      "latency_to_next_ms": 8.87
     }
   ],
   "local": [
     {
-      "node_id": "L01-DF48",
+      "node_id": "L01-C8E4",
       "tier": "local",
       "hw_class": "raspberry_pi_5",
       "status": "idle",
@@ -120,14 +180,14 @@
       "ram_utilisation_pct": 0.0,
       "gpu_utilisation_pct": 0.0,
       "active_apps": 0,
-      "available_cpu_cores": 16.89,
-      "available_ram_mb": 28051,
+      "available_cpu_cores": 42.65,
+      "available_ram_mb": 66851,
       "available_gpu_vram_mb": 0,
-      "available_uplink_kbps": 10143,
-      "latency_to_next_ms": 3.06
+      "available_uplink_kbps": 9702,
+      "latency_to_next_ms": 3.2
     },
     {
-      "node_id": "L02-2D62",
+      "node_id": "L02-CFC5",
       "tier": "local",
       "hw_class": "raspberry_pi_5",
       "status": "idle",
@@ -135,11 +195,56 @@
       "ram_utilisation_pct": 0.0,
       "gpu_utilisation_pct": 0.0,
       "active_apps": 0,
-      "available_cpu_cores": 14.62,
-      "available_ram_mb": 35043,
+      "available_cpu_cores": 45.66,
+      "available_ram_mb": 65484,
       "available_gpu_vram_mb": 0,
-      "available_uplink_kbps": 9584,
-      "latency_to_next_ms": 2.79
+      "available_uplink_kbps": 10994,
+      "latency_to_next_ms": 3.04
+    },
+    {
+      "node_id": "L03-D0C5",
+      "tier": "local",
+      "hw_class": "raspberry_pi_5",
+      "status": "idle",
+      "cpu_utilisation_pct": 0.0,
+      "ram_utilisation_pct": 0.0,
+      "gpu_utilisation_pct": 0.0,
+      "active_apps": 0,
+      "available_cpu_cores": 40.36,
+      "available_ram_mb": 71715,
+      "available_gpu_vram_mb": 0,
+      "available_uplink_kbps": 8958,
+      "latency_to_next_ms": 2.83
+    },
+    {
+      "node_id": "L04-186A",
+      "tier": "local",
+      "hw_class": "raspberry_pi_5",
+      "status": "idle",
+      "cpu_utilisation_pct": 0.0,
+      "ram_utilisation_pct": 0.0,
+      "gpu_utilisation_pct": 0.0,
+      "active_apps": 0,
+      "available_cpu_cores": 44.54,
+      "available_ram_mb": 71629,
+      "available_gpu_vram_mb": 0,
+      "available_uplink_kbps": 10681,
+      "latency_to_next_ms": 3.04
+    },
+    {
+      "node_id": "L05-F6E5",
+      "tier": "local",
+      "hw_class": "raspberry_pi_5",
+      "status": "idle",
+      "cpu_utilisation_pct": 0.0,
+      "ram_utilisation_pct": 0.0,
+      "gpu_utilisation_pct": 0.0,
+      "active_apps": 0,
+      "available_cpu_cores": 44.47,
+      "available_ram_mb": 73376,
+      "available_gpu_vram_mb": 0,
+      "available_uplink_kbps": 11420,
+      "latency_to_next_ms": 2.89
     }
   ]
 }

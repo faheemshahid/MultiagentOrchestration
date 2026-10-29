@@ -54,7 +54,7 @@ NUM_APPS:          int   = 1000         # total apps to generate and deploy
 
 APP_DOMAINS: list = [                  # which domains to include
     "healthcare",
-    # "industrial",   # commented for focused healthcare experiment
+    "industrial",   # commented for focused healthcare experiment
     # "general",      # commented for focused healthcare experiment
 ]
 # To run healthcare only:  APP_DOMAINS = ["healthcare"]
@@ -68,7 +68,7 @@ APP_SUBTYPES: dict = {                 # None = all subtypes in that domain
 # To select specific subtypes:
 #   "healthcare": ["emergency_care", "remote_monitoring"]
 
-REQUIREMENT_MODE: str = "worst"       # "random" | "nominal" | "worst"
+REQUIREMENT_MODE: str = "nominal"       # "random" | "nominal" | "worst"
 RANDOM_SEED: int      = 42             # set None for non-reproducible runs
 
 # ── Infrastructure settings ───────────────────────────────────────────────────
@@ -89,7 +89,7 @@ NODE_VARIATION:  float = 0.50         # ±15% variation in node specs
                                        # 0.0 = identical nodes (controlled)
 
 # ── Agent / LLM settings ──────────────────────────────────────────────────────
-LLM_BACKEND:    str  = "mock"         # "mock" | "ollama" | "llama_cpp"
+LLM_BACKEND:    str  = "llama_cpp"         # "mock" | "ollama" | "llama_cpp"
 LLM_MODEL:      str  = "llama3.2:8b-instruct-q4_K_M"
 LLM_HOST:       str  = "http://localhost:11434"
 AGENT_VERBOSE:  bool = True           # True = detailed per-agent output
