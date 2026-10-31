@@ -63,12 +63,12 @@ APP_DOMAINS: list = [                  # which domains to include
 APP_SUBTYPES: dict = {                 # None = all subtypes in that domain
     "healthcare": ["emergency_care", "remote_monitoring"],
     "industrial": None,
-    # "general":    None,
+    "general":    None,
 }
 # To select specific subtypes:
 #   "healthcare": ["emergency_care", "remote_monitoring"]
 
-REQUIREMENT_MODE: str = "nominal"       # "random" | "nominal" | "worst"
+REQUIREMENT_MODE: str = "random"       # "random" | "nominal" | "worst"
 RANDOM_SEED: int      = 42             # set None for non-reproducible runs
 
 # ── Infrastructure settings ───────────────────────────────────────────────────
@@ -84,15 +84,15 @@ ACTIVE_TIERS: list = [                 # which tiers to include
 
 NUM_FOG_NODES:   int   = 5            # number of fog gateway nodes
 NUM_EDGE_NODES:  int   = 5            # number of edge compute nodes
-NUM_LOCAL_NODES: int   = 5            # number of local Pi/Jetson nodes
+NUM_LOCAL_NODES: int   = 3            # number of local Pi/Jetson nodes
 NODE_VARIATION:  float = 0.50         # ±15% variation in node specs
                                        # 0.0 = identical nodes (controlled)
 
 # ── Agent / LLM settings ──────────────────────────────────────────────────────
-LLM_BACKEND:    str  = "llama_cpp"         # "mock" | "ollama" | "llama_cpp"
+LLM_BACKEND:    str  = "mock"         # "mock" | "ollama" | "llama_cpp"
 LLM_MODEL:      str  = "llama3.2:8b-instruct-q4_K_M"
 LLM_HOST:       str  = "http://localhost:11434"
-AGENT_VERBOSE:  bool = True           # True = detailed per-agent output
+AGENT_VERBOSE:  bool = False           # True = detailed per-agent output
                                        # False = summary only (faster console)
 
 # ── Baseline settings ─────────────────────────────────────────────────────────

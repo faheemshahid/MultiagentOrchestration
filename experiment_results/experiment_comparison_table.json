@@ -1,72 +1,70 @@
 {
   "multi_agent_TOPSIS": {
-    "placed_pct": 97.6,
-    "rejected_pct": 2.4,
-    "avg_latency_ms": 27.23,
-    "avg_decision_ms": 8.13,
-    "avg_score": 70.65,
+    "placed_pct": 94.0,
+    "rejected_pct": 6.0,
+    "avg_latency_ms": 28.05,
+    "avg_decision_ms": 3767.85,
+    "avg_score": 68.62,
     "tier_distribution": {
-      "fog": 546,
-      "local": 409,
-      "edge": 21
+      "local": 157,
+      "fog": 219
     },
-    "edge_pct": 44.06,
+    "edge_pct": 41.76,
     "cloud_pct": 0.0
   },
   "B1_Cloud-Only": {
-    "placed_pct": 12.2,
-    "rejected_pct": 87.8,
+    "placed_pct": 12.0,
+    "rejected_pct": 88.0,
     "avg_latency_ms": 96.0,
     "avg_decision_ms": 0.01,
     "avg_score": 28.0,
     "tier_distribution": {
-      "cloud": 122
+      "cloud": 48
     },
     "edge_pct": 0.0,
     "cloud_pct": 100.0
   },
   "B2_Round-Robin": {
-    "placed_pct": 73.3,
-    "rejected_pct": 26.7,
-    "avg_latency_ms": 33.68,
-    "avg_decision_ms": 0.03,
+    "placed_pct": 65.5,
+    "rejected_pct": 34.5,
+    "avg_latency_ms": 41.06,
+    "avg_decision_ms": 0.01,
     "avg_score": 42.0,
     "tier_distribution": {
-      "cloud": 77,
-      "fog": 314,
-      "edge": 228,
-      "local": 114
+      "cloud": 33,
+      "fog": 149,
+      "edge": 62,
+      "local": 18
     },
-    "edge_pct": 46.66,
-    "cloud_pct": 10.5
+    "edge_pct": 30.53,
+    "cloud_pct": 12.6
   },
   "B3_Static-Threshold": {
-    "placed_pct": 67.5,
-    "rejected_pct": 32.5,
-    "avg_latency_ms": 32.53,
+    "placed_pct": 63.75,
+    "rejected_pct": 36.25,
+    "avg_latency_ms": 29.16,
     "avg_decision_ms": 0.03,
-    "avg_score": 34.16,
+    "avg_score": 37.94,
     "tier_distribution": {
-      "fog": 290,
-      "edge": 235,
-      "cloud": 60,
-      "local": 90
+      "edge": 157,
+      "fog": 74,
+      "cloud": 24
     },
-    "edge_pct": 48.15,
-    "cloud_pct": 8.89
+    "edge_pct": 61.57,
+    "cloud_pct": 9.41
   },
   "B4_Greedy-First-Fit": {
-    "placed_pct": 73.5,
-    "rejected_pct": 26.5,
-    "avg_latency_ms": 36.12,
-    "avg_decision_ms": 0.04,
-    "avg_score": 24.33,
+    "placed_pct": 66.75,
+    "rejected_pct": 33.25,
+    "avg_latency_ms": 32.16,
+    "avg_decision_ms": 0.02,
+    "avg_score": 29.47,
     "tier_distribution": {
-      "fog": 321,
-      "edge": 329,
-      "cloud": 85
+      "edge": 157,
+      "fog": 74,
+      "cloud": 36
     },
-    "edge_pct": 44.76,
-    "cloud_pct": 11.56
+    "edge_pct": 58.8,
+    "cloud_pct": 13.48
   }
 }
