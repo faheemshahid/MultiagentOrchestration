@@ -2135,23 +2135,41 @@ def fig26_qos_sla_satisfaction(decisions: list, baselines: dict):
         return {u: round(passed[u] / max(counts[u], 1) * 100, 2)
                 for u in URGENCY_LEVELS}
 
-    # Multi-agent (decisions are dicts)
-    ma_records = [{"urgency":        d.get("qos", {}).get("urgency_level", ""),
-                   "selected_tier":  d.get("placement", {}).get("selected_tier", ""),
-                   "latency_ms":     d.get("placement", {}).get("latency_estimate_ms", 0.0),
-                   "status":         d.get("placement", {}).get("admission_status", "")}
+    # Map baseline urgency_declared values → standard urgency levels
+    URGENCY_MAP = {
+        "ultra_low_latency": "critical",
+        "low_latency":        "high",
+        "balanced":           "medium",
+        "high_throughput":    "low",
+        # passthrough for already-standard values
+        "critical": "critical",
+        "high":     "high",
+        "medium":   "medium",
+        "low":      "low",
+    }
+
+    # Multi-agent — decisions are dicts (from JSON)
+    ma_records = [{"urgency":       d.get("qos_profile", {}).get("urgency_level", ""),
+                   "selected_tier": d.get("placement",   {}).get("selected_tier", ""),
+                   "latency_ms":    d.get("placement",   {}).get("latency_estimate_ms", 0.0),
+                   "status":        d.get("placement",   {}).get("admission_status", "")}
                   for d in decisions]
     ma_sla = _sla_rate(ma_records, "urgency", "selected_tier", "latency_ms", "status")
 
-    # Baselines
+    # Baselines — urgency_declared uses different naming convention
     b_sla = {}
     for b_name, label in b_labels_map.items():
         results = baselines.get(b_name, [])
-        b_records = [{"urgency":       r.get("urgency_declared", r.get("urgency_level", "")),
-                      "selected_tier": r.get("selected_tier", ""),
-                      "latency_ms":    r.get("latency_estimate_ms", 0.0),
-                      "status":        r.get("admission_status", "")}
-                     for r in results]
+        b_records = []
+        for r in results:
+            raw_urg = r.get("urgency_declared", r.get("urgency_level", ""))
+            mapped  = URGENCY_MAP.get(raw_urg.lower(), raw_urg.lower())
+            b_records.append({
+                "urgency":       mapped,
+                "selected_tier": r.get("selected_tier", ""),
+                "latency_ms":    r.get("latency_estimate_ms", 0.0),
+                "status":        r.get("admission_status", ""),
+            })
         b_sla[label] = _sla_rate(b_records, "urgency", "selected_tier", "latency_ms", "status")
 
     # ── Plot ──────────────────────────────────────────────────────────────────
